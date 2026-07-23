@@ -1,0 +1,108 @@
+/* ========== POLITICA DE PRIVACIDADE PAGE ========== */
+
+/* Page top margin to clear fixed navbar */
+body { padding-top: 80px; }
+
+/* ---------- PAGE HERO BANNER ---------- */
+.privacy-hero {
+  background: linear-gradient(135deg, var(--green-tint) 0%, var(--white) 100%);
+  border-bottom: 2px solid var(--green);
+  padding: 56px 6vw 48px;
+  text-align: center;
+}
+.privacy-hero .eyebrow {
+  color: var(--green);
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.privacy-hero h1 {
+  font-size: clamp(26px, 3.6vw, 42px);
+  color: var(--navy-2);
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.privacy-hero p {
+  color: var(--text-soft);
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ---------- CONTENT SECTION ---------- */
+.privacy-section {
+  padding: 64px 6vw;
+  background: var(--white);
+}
+
+.privacy-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.privacy-intro {
+  font-size: 16px;
+  color: var(--text-soft);
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.privacy-block {
+  margin-bottom: 36px;
+}
+
+.privacy-block h2 {
+  font-size: 20px;
+  color: var(--navy-2);
+  margin-bottom: 16px;
+  border-bottom: 1.5px solid var(--grey-line);
+  padding-bottom: 8px;
+}
+
+.privacy-block p {
+  font-size: 15px;
+  color: var(--text-soft);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.privacy-block ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 16px;
+}
+
+.privacy-block ul li {
+  font-size: 15px;
+  color: var(--text-soft);
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+}
+
+.privacy-block ul li::before {
+  content: "•";
+  color: var(--green);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.privacy-contact-info {
+  background: var(--grey-bg);
+  border: 1px solid var(--grey-line);
+  border-radius: var(--radius-m);
+  padding: 24px;
+  margin-top: 24px;
+}
+
+.privacy-contact-info p {
+  margin-bottom: 8px;
+}
+
+.privacy-contact-info p:last-child {
+  margin-bottom: 0;
+}
