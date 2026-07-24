@@ -1,0 +1,354 @@
+/* ---------- PCMSO PAGE ---------- */
+
+/* Page Hero */
+.pcmso-hero {
+  background: linear-gradient(135deg, var(--green-tint) 0%, var(--white) 100%);
+  padding: 100px 6vw 60px;
+  border-bottom: 1px solid var(--grey-line);
+  margin-top: 80px;
+  text-align: center;
+}
+.pcmso-hero .hero-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.pcmso-hero h1 {
+  font-size: clamp(28px, 4vw, 44px);
+  color: var(--navy-2);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+.pcmso-hero .subtitle {
+  font-size: clamp(16px, 1.8vw, 20px);
+  color: var(--green-dark);
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+/* Sections Base */
+.section-pcmso {
+  padding: 60px 6vw;
+  background: var(--white);
+}
+
+.section-pcmso-alt {
+  padding: 60px 6vw;
+  background: var(--grey-bg);
+  border-top: 1px solid var(--grey-line);
+  border-bottom: 1px solid var(--grey-line);
+}
+
+/* Objectives & Guidelines */
+.pcmso-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 50px;
+  align-items: start;
+}
+.pcmso-title-block h2 {
+  font-size: clamp(22px, 3vw, 32px);
+  color: var(--navy-2);
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+.pcmso-title-block p {
+  color: var(--text-soft);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.guidelines-box {
+  background: var(--green-tint);
+  border-left: 4px solid var(--green);
+  border-radius: 0 var(--radius-m) var(--radius-m) 0;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.guideline-item {
+  display: flex;
+  gap: 16px;
+}
+.guideline-item-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-soft);
+}
+.guideline-item-content h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--navy-2);
+  margin-bottom: 4px;
+}
+.guideline-item-content p {
+  font-size: 14px;
+  color: var(--text-soft);
+  line-height: 1.5;
+}
+
+/* Responsibilities (Employer vs Doctor) */
+.roles-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+.role-card {
+  background: var(--white);
+  border: 1px solid var(--grey-line);
+  border-radius: var(--radius-m);
+  padding: 30px;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.role-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--green-light);
+}
+.role-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  border-bottom: 1.5px solid var(--grey-line);
+  padding-bottom: 15px;
+}
+.role-badge {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 8px;
+  border-radius: var(--radius-s);
+}
+.role-badge.employer {
+  background: rgba(30, 41, 59, 0.08);
+  color: var(--navy);
+}
+.role-badge.doctor {
+  background: var(--green-tint);
+  color: var(--green-dark);
+}
+.role-card-header h3 {
+  font-size: 18px;
+  color: var(--navy-2);
+}
+.role-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.role-list-item {
+  font-size: 14.5px;
+  color: var(--text-soft);
+  display: flex;
+  gap: 10px;
+  line-height: 1.6;
+}
+.role-list-item svg {
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+/* Exam Frequency (Periodicidade) */
+.exams-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+.exam-card {
+  background: var(--white);
+  border: 1px solid var(--grey-line);
+  border-radius: var(--radius-m);
+  padding: 24px;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.2s var(--ease);
+}
+.exam-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--green-light);
+  box-shadow: var(--shadow-hover);
+}
+.exam-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-s);
+  background: var(--grey-bg);
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s var(--ease);
+}
+.exam-card:hover .exam-icon-wrap {
+  background: var(--green-tint);
+  color: var(--green);
+}
+.exam-card h3 {
+  font-size: 16px;
+  color: var(--navy-2);
+}
+.exam-card p {
+  font-size: 13.5px;
+  color: var(--text-soft);
+  line-height: 1.5;
+}
+
+/* Legal Cards (ASO, Prontuario, Relatório) */
+.legal-flex-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+.legal-card {
+  background: var(--white);
+  border: 1.5px solid var(--grey-line);
+  border-radius: var(--radius-m);
+  padding: 30px;
+  position: relative;
+  transition: border-color 0.2s var(--ease);
+}
+.legal-card:hover {
+  border-color: var(--green-light);
+}
+.legal-card h3 {
+  font-size: 18px;
+  color: var(--navy-2);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.legal-card p {
+  font-size: 14px;
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+
+/* Quote Form Section */
+.quote-wrapper {
+  max-width: 650px;
+  margin: 40px auto 0;
+}
+.quote-form-card {
+  background: var(--white);
+  border: 1px solid var(--grey-line);
+  border-radius: var(--radius-m);
+  padding: 40px;
+  box-shadow: var(--shadow-hover);
+}
+.quote-form-card h2 {
+  font-size: 22px;
+  color: var(--navy-2);
+  margin-bottom: 8px;
+  text-align: center;
+}
+.quote-form-card p {
+  font-size: 14.5px;
+  color: var(--text-soft);
+  margin-bottom: 30px;
+  text-align: center;
+}
+.form-field-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+.form-field.full {
+  margin-bottom: 20px;
+}
+.form-field label {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--navy);
+}
+.form-field label span {
+  color: #ef4444;
+}
+.form-field input, .form-field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: var(--radius-s);
+  border: 1.5px solid var(--grey-line);
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--navy);
+  background: var(--white);
+  transition: all .2s var(--ease);
+}
+.form-field input:focus, .form-field textarea:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 4px rgba(0, 135, 90, 0.12);
+  outline: none;
+}
+.form-field textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.quote-form-card button[type="submit"] {
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .exams-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .legal-flex-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 980px) {
+  .pcmso-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .roles-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .exams-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .legal-flex-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-field-group {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .exams-grid {
+    grid-template-columns: 1fr;
+  }
+  .quote-form-card {
+    padding: 24px;
+  }
+}

@@ -1,0 +1,382 @@
+/* ---------- PSICOSSOCIAL PAGE ---------- */
+
+/* Page Hero */
+.psico-hero {
+  background: linear-gradient(135deg, var(--green-tint) 0%, var(--white) 100%);
+  padding: 100px 6vw 60px;
+  border-bottom: 1px solid var(--grey-line);
+  margin-top: 80px;
+  text-align: center;
+}
+.psico-hero .hero-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.psico-hero h1 {
+  font-size: clamp(28px, 4vw, 44px);
+  color: var(--navy-2);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+.psico-hero .subtitle {
+  font-size: clamp(16px, 1.8vw, 20px);
+  color: var(--green-dark);
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+/* Sections Base */
+.section-psico {
+  padding: 60px 6vw;
+  background: var(--white);
+}
+
+.section-psico-alt {
+  padding: 60px 6vw;
+  background: var(--grey-bg);
+  border-top: 1px solid var(--grey-line);
+  border-bottom: 1px solid var(--grey-line);
+}
+
+/* Grid Layout */
+.psico-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+/* Comunicado Card */
+.comunicado-card {
+  background: var(--white);
+  border: 1px solid var(--grey-line);
+  border-radius: var(--radius-m);
+  padding: 40px;
+  box-shadow: var(--shadow-soft);
+  position: relative;
+}
+.comunicado-header {
+  border-bottom: 2px solid var(--green-tint);
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+}
+.comunicado-tag {
+  background: #fef3c7;
+  color: #d97706;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: var(--radius-s);
+  display: inline-block;
+  margin-bottom: 12px;
+}
+.comunicado-header h2 {
+  font-size: 24px;
+  color: var(--navy-2);
+}
+.comunicado-date {
+  font-size: 13.5px;
+  color: var(--text-soft);
+  font-weight: 500;
+  margin-top: 6px;
+}
+.comunicado-body p {
+  font-size: 15px;
+  color: var(--navy);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.comunicado-body p strong {
+  color: var(--navy-2);
+}
+
+/* Sidebar Cards */
+.psico-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.info-card {
+  background: var(--white);
+  border: 1px solid var(--grey-line);
+  border-radius: var(--radius-m);
+  padding: 30px;
+  box-shadow: var(--shadow-soft);
+}
+.info-card-title {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--navy-2);
+  margin-bottom: 18px;
+  border-bottom: 1.5px solid var(--grey-line);
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.info-item {
+  display: flex;
+  gap: 14px;
+  align-items: start;
+}
+.info-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--green-tint);
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info-text h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy-2);
+  margin-bottom: 3px;
+}
+.info-text p {
+  font-size: 13.5px;
+  color: var(--text-soft);
+  line-height: 1.5;
+}
+
+/* Other Services Section */
+.services-section-title {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+.services-section-title h2 {
+  font-size: 26px;
+  color: var(--navy-2);
+  margin-bottom: 10px;
+}
+.services-section-title p {
+  color: var(--text-soft);
+  font-size: 15.5px;
+}
+.psico-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.psico-service-card {
+  background: var(--white);
+  border: 1px solid var(--grey-line);
+  border-radius: var(--radius-m);
+  padding: 30px;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.25s var(--ease);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.psico-service-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--green-light);
+  box-shadow: var(--shadow-hover);
+}
+.psico-service-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-s);
+  background: var(--green-tint);
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.psico-service-card h3 {
+  font-size: 18px;
+  color: var(--navy-2);
+}
+.psico-service-card p {
+  font-size: 14px;
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+
+/* Downloads Section */
+.download-section-title {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+.download-section-title h2 {
+  font-size: 26px;
+  color: var(--navy-2);
+  margin-bottom: 10px;
+}
+.download-section-title p {
+  color: var(--text-soft);
+  font-size: 15.5px;
+}
+.download-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.download-card {
+  background: var(--white);
+  border: 1.5px solid var(--grey-line);
+  border-radius: var(--radius-m);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  transition: all 0.2s var(--ease);
+}
+.download-card:hover {
+  border-color: var(--green);
+  box-shadow: var(--shadow-soft);
+}
+.download-info {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.download-file-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-s);
+  background: rgba(239, 68, 68, 0.08);
+  color: #ef4444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.download-text h4 {
+  font-size: 15px;
+  color: var(--navy-2);
+  margin-bottom: 4px;
+}
+.download-text p {
+  font-size: 12.5px;
+  color: var(--text-soft);
+}
+.download-btn {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--green-tint);
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s var(--ease);
+}
+.download-card:hover .download-btn {
+  background: var(--green);
+  color: var(--white);
+  transform: translateY(1px);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 980px) {
+  .psico-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .psico-services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .download-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .comunicado-card {
+    padding: 24px;
+  }
+}
+
+/* ---------- PAGE TABLE OF CONTENTS NAV ---------- */
+.page-toc {
+  background: var(--white);
+  border-bottom: 1px solid var(--grey-line);
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+  position: sticky;
+  top: 80px;
+  z-index: 900;
+}
+.page-toc-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 0;
+  flex-wrap: wrap;
+}
+.page-toc-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--text-soft);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.page-toc-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.page-toc-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 14px;
+  border-radius: 100px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-soft);
+  background: var(--grey-bg);
+  border: 1.5px solid transparent;
+  transition: all .2s var(--ease);
+  white-space: nowrap;
+}
+.page-toc-link svg {
+  flex-shrink: 0;
+  transition: stroke .2s var(--ease);
+}
+.page-toc-link:hover {
+  color: var(--green);
+  background: var(--green-tint);
+  border-color: var(--green-light);
+}
+.page-toc-link.active {
+  color: var(--green-dark);
+  background: var(--green-tint);
+  border-color: var(--green);
+}
+@media (max-width: 640px) {
+  .page-toc-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .page-toc-link {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+}

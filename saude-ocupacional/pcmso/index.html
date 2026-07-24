@@ -1,26 +1,383 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brasmed - Medicina e SeguranÃ§a do Trabalho</title>
-    <meta name="description" content="Brasmed - SoluÃ§Ãµes em Medicina Ocupacional e SeguranÃ§a do Trabalho.">
+    <title>PCMSO - Programa de Controle Médico de Saúde Ocupacional | Brasmed</title>
+    <meta name="description" content="Saiba tudo sobre o Programa de Controle Médico de Saúde Ocupacional (PCMSO) da Brasmed, de acordo com a NR-7.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/components.css">
     <link rel="stylesheet" href="/assets/css/utilities.css">
+    <link rel="stylesheet" href="/assets/css/pages/pcmso.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/images/logo.png">
 </head>
 <body>
     <div id="app">
-        <!-- Header / Navbar dynamically loaded or included -->
-        <header id="header-container"></header>
+        <!-- ================= NAVBAR ================= -->
+        <header class="navbar" id="navbar">
+          <!-- Logo — pinned to the far left -->
+          <a href="/" class="logo">
+            <img src="/assets/images/Logo.png" class="logo-img" alt="Brasmed">
+          </a>
+
+          <!-- Right-side: nav links + CTA -->
+          <div class="nav-right">
+            <nav class="nav-links" id="navLinks">
+              <div class="nav-item"><a href="/sobre/" class="nav-link">Quem Somos</a></div>
+              <div class="nav-item"><a href="https://drive.google.com/file/d/1UeKE1xHVaBGxzF2mYXe1Us-mmotlPUUt/view" target="_blank" class="nav-link">Apresentação</a></div>
+              <div class="nav-item"><a href="/rede-credenciada/" class="nav-link">Redes Credenciadas</a></div>
+
+              <div class="nav-item">
+                <button class="nav-link" type="button" aria-haspopup="true" aria-expanded="false">
+                  Serviços <span class="chevron"></span>
+                </button>
+                <div class="dropdown">
+                  <div class="dropdown-group">
+                    <div class="dropdown-group-title">Saúde Ocupacional</div>
+                    <a href="/saude-ocupacional/pcmso/" class="nav-highlight">PCMSO</a>
+                    <a href="/saude-ocupacional/exames/">Exames Ocupacionais</a>
+                  </div>
+                  <div class="dropdown-divider"></div>
+                  <div class="dropdown-group">
+                    <div class="dropdown-group-title">Segurança do Trabalho</div>
+                    <a href="/seguranca-do-trabalho/ppp/">PPP</a>
+                    <a href="/seguranca-do-trabalho/pgr/">PGR</a>
+                    <a href="/seguranca-do-trabalho/ltcat/">LTCAT</a>
+                    <a href="/seguranca-do-trabalho/nrs/">Normas Regulamentadoras (NRs)</a>
+                    <a href="/seguranca-do-trabalho/treinamentos/">Treinamentos</a>
+                  </div>
+                  <div class="dropdown-divider"></div>
+                  <div class="dropdown-group">
+                    <div class="dropdown-group-title">Outros</div>
+                    <a href="/psicossocial/">Atenção Psicossocial</a>
+                    <a href="/gestao-afastados/">Gestão de Afastados</a>
+                    <a href="/e-social/">e-Social</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="nav-item"><a href="/#contato" class="nav-link nav-highlight">Contato</a></div>
+            </nav>
+
+            <div class="nav-cta-group">
+              <a href="https://brasmed.prosesmt.com.br/login" target="_blank" class="btn btn-primary" style="padding:11px 22px;font-size:14px;">Guia de Encaminhamento</a>
+              <button class="nav-burger" id="burger" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <div id="top"></div>
+
+        <!-- ================= HERO ================= -->
+        <section class="pcmso-hero">
+            <div class="container hero-inner">
+                <span class="eyebrow">Saúde Ocupacional</span>
+                <h1>PCMSO</h1>
+                <p class="subtitle">Programa de Controle Médico de Saúde Ocupacional (NR-7)</p>
+            </div>
+        </section>
 
         <main>
-            <h1>PCMSO - Brasmed</h1>
+            <!-- ================= INTRO & GUIDELINES ================= -->
+            <section class="section-pcmso">
+                <div class="container pcmso-intro-grid">
+                    <div class="pcmso-title-block">
+                        <h2>Conformidade Legal e Preservação da Saúde</h2>
+                        <p>A implantação do Programa de Controle Médico de Saúde Ocupacional (PCMSO) exige a execução de diversas etapas técnicas cruciais, gerando obrigações e responsabilidades legais para as empresas. Nosso papel é estruturar todo esse ecossistema técnico para proteger seus colaboradores e manter sua empresa em total conformidade com a NR-7.</p>
+                        
+                        <h3 style="font-size: 18px; color: var(--navy-2); margin-top: 25px; margin-bottom: 8px;">Do Objetivo Principal</h3>
+                        <p>Estabelecer a obrigatoriedade da elaboração e implementação do programa por parte de todos os empregadores que possuam empregados, com o objetivo explícito de <strong>promover e preservar a integridade física e mental do trabalhador</strong>.</p>
+                    </div>
+
+                    <div class="guidelines-box">
+                        <h3 style="font-size: 18px; color: var(--green-dark); margin-bottom: 5px;">Diretrizes do Programa</h3>
+                        
+                        <div class="guideline-item">
+                            <div class="guideline-item-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                            </div>
+                            <div class="guideline-item-content">
+                                <h4>Abordagem Coletiva e Individual</h4>
+                                <p>Foco nas questões incidentes sobre o indivíduo e a coletividade dos trabalhadores, utilizando instrumental clínico-epidemiológico na relação saúde-trabalho.</p>
+                            </div>
+                        </div>
+
+                        <div class="guideline-item">
+                            <div class="guideline-item-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                            </div>
+                            <div class="guideline-item-content">
+                                <h4>Caráter Preventivo Ativo</h4>
+                                <p>Rastreamento, prevenção e diagnóstico precoce dos agravos à saúde relacionados ao trabalho, inclusive identificando alterações de natureza subclínica.</p>
+                            </div>
+                        </div>
+
+                        <div class="guideline-item">
+                            <div class="guideline-item-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
+                            <div class="guideline-item-content">
+                                <h4>Diagnóstico de Danos</h4>
+                                <p>Detecção e constatação oportuna de possíveis doenças profissionais ou de danos irreversíveis à saúde dos colaboradores.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= RESPONSIBILITIES ================= -->
+            <section class="section-pcmso-alt">
+                <div class="container">
+                    <div style="text-align: center; max-width: 700px; margin: 0 auto 30px;">
+                        <span class="eyebrow">Atribuições</span>
+                        <h2>Divisão de Responsabilidades</h2>
+                        <p style="color: var(--text-soft); font-size: 15.5px;">O sucesso e a eficácia do PCMSO dependem do alinhamento entre o empregador e a coordenação médica.</p>
+                    </div>
+
+                    <div class="roles-grid">
+                        <!-- Employer Role -->
+                        <div class="role-card">
+                            <div class="role-card-header">
+                                <span class="role-badge employer">Empresa</span>
+                                <h3>Quanto ao Empregador</h3>
+                            </div>
+                            <div class="role-list">
+                                <div class="role-list-item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                                    <span>Garantir a elaboração, implementação efetiva e zelar pela contínua eficácia do programa na empresa.</span>
+                                </div>
+                                <div class="role-list-item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                                    <span>Custear integralmente todos os procedimentos e exames clínicos solicitados no escopo do PCMSO, sem qualquer ônus para o trabalhador.</span>
+                                </div>
+                                <div class="role-list-item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                                    <span>Comprovar, perante a fiscalização do trabalho, a quitação e regularidade de todos os procedimentos quando solicitado.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Coordination Doctor Role -->
+                        <div class="role-card">
+                            <div class="role-card-header">
+                                <span class="role-badge doctor">Corpo Clínico</span>
+                                <h3>Quanto ao Médico Coordenador</h3>
+                            </div>
+                            <div class="role-list">
+                                <div class="role-list-item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                                    <span>Elaborar, planejar e organizar a estrutura técnica do Programa de Controle Médico de Saúde Ocupacional (PCMSO).</span>
+                                </div>
+                                <div class="role-list-item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                                    <span>Realizar os exames clínicos ou credenciar profissionais familiarizados com patologia ocupacional, ambientes de trabalho e riscos locais.</span>
+                                </div>
+                                <div class="role-list-item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                                    <span>Delegar e encaminhar exames complementares de diagnóstico a profissionais ou entidades capacitadas, equipadas e devidamente qualificadas.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= EXAMS FREQUENCY ================= -->
+            <section class="section-pcmso">
+                <div class="container">
+                    <div style="text-align: center; max-width: 700px; margin: 0 auto 40px;">
+                        <span class="eyebrow">Exames Obrigatórios</span>
+                        <h2>Periodicidade dos Exames Clínicos</h2>
+                        <p style="color: var(--text-soft); font-size: 15.5px;">A avaliação clínica deve ocorrer em momentos estratégicos do vínculo de trabalho do colaborador.</p>
+                    </div>
+
+                    <div class="exams-grid">
+                        <div class="exam-card">
+                            <div class="exam-icon-wrap">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+                            </div>
+                            <h3>Admissional</h3>
+                            <p>Deve ser realizado obrigatoriamente <strong>antes</strong> de o empregado iniciar as suas atividades na empresa.</p>
+                        </div>
+
+                        <div class="exam-card">
+                            <div class="exam-icon-wrap">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            </div>
+                            <h3>Periódico</h3>
+                            <p>Realizado de forma <strong>anual</strong> para menores de 18 e maiores de 45 anos, ou a critério do coordenador médico para expostos a riscos específicos.</p>
+                        </div>
+
+                        <div class="exam-card">
+                            <div class="exam-icon-wrap">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.5 2v6h6M21.5 22v-6h-6"/><path d="M22 11.5A10 10 0 0 0 3.2 7.2L2.5 8M2 12.5a10 10 0 0 0 18.8 4.3l.7-.8"/></svg>
+                            </div>
+                            <h3>Retorno ao Trabalho</h3>
+                            <p>Realizado no <strong>primeiro dia</strong> de volta após afastamentos superiores a 30 dias (por doença, acidente ou licença maternidade).</p>
+                        </div>
+
+                        <div class="exam-card">
+                            <div class="exam-icon-wrap">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M8 21H3v-5M12 12L21 3M12 12L3 21"/></svg>
+                            </div>
+                            <h3>Mudança de Função</h3>
+                            <p>Obrigatório <strong>antes</strong> da alteração de atividade sempre que houver exposição a riscos ocupacionais diferentes do anterior.</p>
+                        </div>
+
+                        <div class="exam-card">
+                            <div class="exam-icon-wrap">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="17" y1="8" x2="22" y2="13"/><line x1="22" y1="8" x2="17" y2="13"/></svg>
+                            </div>
+                            <h3>Demissional</h3>
+                            <p>Realizado dentro dos <strong>15 dias</strong> que antecederem o desligamento definitivo do colaborador da empresa.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= LEGAL / COMPLIANCE ================= -->
+            <section class="section-pcmso-alt">
+                <div class="container">
+                    <div style="text-align: center; max-width: 700px; margin: 0 auto 30px;">
+                        <span class="eyebrow">Normativas Obrigatórias</span>
+                        <h2>Documentações Exigidas por Lei</h2>
+                        <p style="color: var(--text-soft); font-size: 15.5px;">Garantia de segurança jurídica e integridade fiscal diante de vistorias federais.</p>
+                    </div>
+
+                    <div class="legal-flex-grid">
+                        <div class="legal-card">
+                            <h3>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+                                Emissão de ASO
+                            </h3>
+                            <p>A cada exame realizado é emitido o <strong>Atestado de Saúde Ocupacional (ASO)</strong> em 3 vias: 1ª arquivada na empresa (fiscalização), 2ª entregue ao trabalhador e 3ª arquivada de forma segura na Brasmed.</p>
+                        </div>
+
+                        <div class="legal-card">
+                            <h3>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                Prontuário Clínico
+                            </h3>
+                            <p>Abertura de prontuário clínico individual contendo histórico médico e exames complementares. Deve ser mantido guardado obrigatoriamente por <strong>20 anos</strong> após o desligamento do funcionário.</p>
+                        </div>
+
+                        <div class="legal-card">
+                            <h3>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+                                Relatório Anual (NR-7)
+                            </h3>
+                            <p>Planejamento das ações de saúde anual discriminado por setor, exames realizados e estatísticas. Deve ser apresentado e discutido na <strong>CIPA (NR-5)</strong> e mantido à disposição do Ministério do Trabalho.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= QUOTE FORM ================= -->
+            <section class="section-pcmso" id="cotacao">
+                <div class="container quote-wrapper">
+                    <form class="quote-form-card" id="quoteForm">
+                        <h2>Solicite uma Cotação On-line</h2>
+                        <p>Preencha os dados da sua empresa abaixo e nossa equipe comercial entrará em contato rapidamente.</p>
+
+                        <div class="form-field-group">
+                            <div class="form-field">
+                                <label for="nome">Nome <span>*</span></label>
+                                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="empresa">Empresa <span>*</span></label>
+                                <input type="text" id="empresa" name="empresa" placeholder="Nome da empresa" required>
+                            </div>
+                        </div>
+
+                        <div class="form-field-group">
+                            <div class="form-field">
+                                <label for="email">E-mail <span>*</span></label>
+                                <input type="email" id="email" name="email" placeholder="voce@empresa.com" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="whatsapp">WhatsApp</label>
+                                <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 00000-0000">
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="assunto">Assunto <span>*</span></label>
+                            <input type="text" id="assunto" name="assunto" placeholder="Ex: Cotação de PCMSO para Guarulhos" required>
+                        </div>
+
+                        <div class="form-field full">
+                            <label for="mensagem">Escreva sua mensagem aqui <span>*</span></label>
+                            <textarea id="mensagem" name="mensagem" placeholder="Descreva brevemente o número de funcionários e o segmento da sua empresa" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Enviar Solicitação</button>
+                    </form>
+                </div>
+            </section>
         </main>
 
-        <footer id="footer-container"></footer>
+        <!-- ================= FOOTER ================= -->
+        <footer>
+          <div class="footer-top">
+            <div class="footer-brand">
+              <div class="logo">
+                <img src="/assets/images/Logo.png" class="logo-img" alt="Brasmed">
+              </div>
+              <p>Medicina e segurança ocupacional desde 2001, atuando em todo o Brasil com estrutura própria e rede credenciada.</p>
+              <a href="https://wa.me/551149635529" class="whatsapp-btn" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.7 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.2-3.5-.8-3-1.2-4.9-4.2-5.1-4.4-.1-.2-1.2-1.6-1.2-3s.8-2.2 1-2.5c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.2-.3.3-.1.6.2.3.9 1.5 1.9 2.4 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.6-.1l.7-.8c.2-.3.4-.2.7-.1l1.7.8c.2.1.4.2.5.3.1.2.1 1-.1 1.7z"/></svg>
+                Chamar no WhatsApp
+              </a>
+            </div>
+
+            <div class="footer-col">
+              <h4>Links Rápidos</h4>
+              <ul>
+                <li><a href="/#sobre">Quem Somos</a></li>
+                <li><a href="https://drive.google.com/file/d/1UeKE1xHVaBGxzF2mYXe1Us-mmotlPUUt/view" target="_blank">Apresentação</a></li>
+                <li><a href="/rede-credenciada">Rede Credenciada</a></li>
+                <li><a href="/#servicos">Guia de Encaminhamento</a></li>
+                <li><a href="/#contato">Contato</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4>Contato</h4>
+              <ul>
+                <li><a href="tel:+551149635529">(11) 4963-5529</a></li>
+                <li><a href="https://wa.me/551149635529" target="_blank" rel="noopener">WhatsApp</a></li>
+                <li><span class="addr">Seg a Sex: 8h às 17h<br>Sáb, Dom e Feriado: fechado</span></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4>Endereço</h4>
+              <span class="addr">Rua Darcy Vargas, 319<br>Centro — Guarulhos - SP</span>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <p>© 2022 BRASMEDSAUDEOCUPACIONAL - Todos os direitos reservados</p>
+            <div class="footer-bottom-links">
+              <a href="#">Política de Privacidade</a>
+              <a href="#">Direitos Autorais</a>
+            </div>
+          </div>
+        </footer>
     </div>
+
     <!-- JS -->
     <script src="/assets/js/main.js" type="module"></script>
 </body>

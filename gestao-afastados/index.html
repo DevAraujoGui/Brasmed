@@ -1,26 +1,316 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brasmed - Medicina e SeguranÃ§a do Trabalho</title>
-    <meta name="description" content="Brasmed - SoluÃ§Ãµes em Medicina Ocupacional e SeguranÃ§a do Trabalho.">
+    <title>Gestão de Afastados | Brasmed</title>
+    <meta name="description" content="Programa de Gerenciamento de Absenteísmo e Retorno ao Trabalho Brasmed - Medicina e Segurança do Trabalho.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/components.css">
     <link rel="stylesheet" href="/assets/css/utilities.css">
+    <link rel="stylesheet" href="/assets/css/pages/gestao-afastados.css">
 </head>
 <body>
     <div id="app">
-        <!-- Header / Navbar dynamically loaded or included -->
-        <header id="header-container"></header>
+        <!-- ================= NAVBAR ================= -->
+        <header class="navbar" id="navbar">
+          <!-- Logo — pinned to the far left -->
+          <a href="/" class="logo">
+            <img src="/assets/images/Logo.png" class="logo-img" alt="Brasmed">
+          </a>
+
+          <!-- Right-side: nav links + CTA -->
+          <div class="nav-right">
+            <nav class="nav-links" id="navLinks">
+              <div class="nav-item"><a href="/sobre/" class="nav-link">Quem Somos</a></div>
+              <div class="nav-item"><a href="https://drive.google.com/file/d/1UeKE1xHVaBGxzF2mYXe1Us-mmotlPUUt/view" target="_blank" class="nav-link">Apresentação</a></div>
+              <div class="nav-item"><a href="/rede-credenciada/" class="nav-link">Redes Credenciadas</a></div>
+
+              <div class="nav-item">
+                <button class="nav-link" type="button" aria-haspopup="true" aria-expanded="false">
+                  Serviços <span class="chevron"></span>
+                </button>
+                <div class="dropdown">
+                  <div class="dropdown-group">
+                    <div class="dropdown-group-title">Saúde Ocupacional</div>
+                    <a href="/saude-ocupacional/pcmso/">PCMSO</a>
+                    <a href="/saude-ocupacional/exames/">Exames Ocupacionais</a>
+                  </div>
+                  <div class="dropdown-divider"></div>
+                  <div class="dropdown-group">
+                    <div class="dropdown-group-title">Segurança do Trabalho</div>
+                    <a href="/seguranca-do-trabalho/ppp/">PPP</a>
+                    <a href="/seguranca-do-trabalho/pgr/">PGR</a>
+                    <a href="/seguranca-do-trabalho/ltcat/">LTCAT</a>
+                    <a href="/seguranca-do-trabalho/nrs/">Normas Regulamentadoras (NRs)</a>
+                    <a href="/seguranca-do-trabalho/treinamentos/">Treinamentos</a>
+                  </div>
+                  <div class="dropdown-divider"></div>
+                  <div class="dropdown-group">
+                    <div class="dropdown-group-title">Outros</div>
+                    <a href="/psicossocial/">Atenção Psicossocial</a>
+                    <a href="/gestao-afastados/" class="nav-highlight">Gestão de Afastados</a>
+                    <a href="/e-social/">e-Social</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="nav-item"><a href="/#contato" class="nav-link nav-highlight">Contato</a></div>
+            </nav>
+
+            <div class="nav-cta-group">
+              <a href="https://brasmed.prosesmt.com.br/login" target="_blank" class="btn btn-primary" style="padding:11px 22px;font-size:14px;">Guia de Encaminhamento</a>
+              <button class="nav-burger" id="burger" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <div id="top"></div>
+
+        <!-- ================= HERO ================= -->
+        <section class="page-hero">
+            <div class="container hero-inner">
+                <span class="eyebrow">Programas Especiais</span>
+                <h1>Gestão de Afastados</h1>
+                <p class="subtitle">Programa de Gerenciamento de Absenteísmo e Retorno ao Trabalho</p>
+                <div class="hero-actions">
+                    <a href="https://drive.google.com/file/d/1NvOU8JbxzbjzbXCMsH24yPdiB8Q0gldu/view" target="_blank" rel="noopener" class="btn btn-primary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:4px;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                        Baixar Apresentação Comercial (PDF)
+                    </a>
+                </div>
+            </div>
+        </section>
 
         <main>
-            <h1>GestÃ£o de Afastados - Brasmed</h1>
+            <!-- ================= INTRO / EVIDENCE ================= -->
+            <section class="section-intro">
+                <div class="container intro-grid">
+                    <div class="intro-text">
+                        <h2>Medicina Baseada em Evidências para Redução de Custos</h2>
+                        <p>Nosso programa é fundamentado em evidências médicas robustas que comprovam que a identificação ágil e o gerenciamento sistemático de colaboradores afastados são chaves fundamentais para otimizar a saúde corporativa.</p>
+                        
+                        <div class="intro-highlight">
+                            <h4>Principais Benefícios Estratégicos</h4>
+                            <ul>
+                                <li>Diminuição de absenteísmo</li>
+                                <li>Redução de presenteísmo</li>
+                                <li>Mitigação de ações judiciais</li>
+                                <li>Redução de gastos de saúde</li>
+                                <li>Melhora da qualidade de vida</li>
+                                <li>Retorno seguro às atividades</li>
+                            </ul>
+                        </div>
+                        
+                        <p>Ao cuidar de perto do colaborador afastado, a Brasmed proporciona um canal humanizado de retorno, reduzindo o tempo de inatividade e promovendo a segurança jurídica e financeira da sua empresa.</p>
+                    </div>
+
+                    <div class="intro-visual">
+                        <div class="visual-card">
+                            <h3 class="visual-title">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--green);"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                                Indicadores de Impacto Estimados
+                            </h3>
+                            <div class="visual-chart">
+                                <div class="chart-row">
+                                    <div class="chart-label">
+                                        <span>Redução de Absenteísmo</span>
+                                        <span>Até 35%</span>
+                                    </div>
+                                    <div class="chart-bar-bg">
+                                        <div class="chart-bar-fill" style="width: 35%;"></div>
+                                    </div>
+                                </div>
+                                <div class="chart-row">
+                                    <div class="chart-label">
+                                        <span>Mitigação de Passivo Trabalhista</span>
+                                        <span>Até 50%</span>
+                                    </div>
+                                    <div class="chart-bar-bg">
+                                        <div class="chart-bar-fill fill-2" style="width: 50%;"></div>
+                                    </div>
+                                </div>
+                                <div class="chart-row">
+                                    <div class="chart-label">
+                                        <span>Retorno Seguro ao Trabalho</span>
+                                        <span>Mais Rápido</span>
+                                    </div>
+                                    <div class="chart-bar-bg">
+                                        <div class="chart-bar-fill fill-3" style="width: 80%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= PROCESS / HOW IT WORKS ================= -->
+            <section class="section-process">
+                <div class="container">
+                    <div style="text-align: center; max-width: 700px; margin: 0 auto 50px;">
+                        <span class="eyebrow">Fluxo de Trabalho</span>
+                        <h2>Como Funciona o Programa?</h2>
+                        <p style="color: var(--text-soft); font-size: 16px;">Integramos tecnologia e cuidado clínico em um processo prático para o RH e seguro para a empresa.</p>
+                    </div>
+
+                    <div class="process-steps">
+                        <div class="process-card">
+                            <span class="process-num">01</span>
+                            <h3>Lançamento pelo RH</h3>
+                            <p>O RH recebe um login exclusivo para acessar o nosso sistema de gestão. A partir dele, os atestados médicos (com CID) e as Comunicações de Acidente de Trabalho (CAT) são inseridos de forma simples e rápida.</p>
+                        </div>
+                        <div class="process-card">
+                            <span class="process-num">02</span>
+                            <h3>Rastreamento da Saúde</h3>
+                            <p>Nossa equipe médica especializada analisa em tempo real os dados coletados. Mapeamos os padrões de adoecimento do time (através dos CIDs informados) e identificamos precocemente casos que exigem intervenção.</p>
+                        </div>
+                        <div class="process-card">
+                            <span class="process-num">03</span>
+                            <h3>Intervenção Direcionada</h3>
+                            <p>Realizamos a intervenção clínica preventiva de forma presencial em nossa sede (com horário marcado no ambulatório) ou online via telemedicina na plataforma ProntMed (atendimento puramente clínico).</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= OFFERINGS ================= -->
+            <section class="section-offers">
+                <div class="container">
+                    <div style="text-align: center; max-width: 700px; margin: 0 auto 50px;">
+                        <span class="eyebrow">Diferenciais e Escopo</span>
+                        <h2>O que está incluído no programa?</h2>
+                        <p style="color: var(--text-soft); font-size: 16px;">Oferecemos uma cobertura integral de serviços para garantir suporte de ponta a ponta na gestão dos afastados.</p>
+                    </div>
+
+                    <div class="offers-grid">
+                        <div class="offer-card">
+                            <div class="offer-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                            </div>
+                            <h3>Consultas Clínicas de Rastreio</h3>
+                            <p>Consultas com foco em investigação médica ativa e identificação de riscos, disponíveis tanto em formato presencial quanto online.</p>
+                        </div>
+                        
+                        <div class="offer-card">
+                            <div class="offer-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                            </div>
+                            <h3>Acompanhamento de Afastados</h3>
+                            <p>Monitoramento contínuo e acolhimento clínico via telemedicina para garantir que o colaborador tenha o suporte necessário durante o afastamento.</p>
+                        </div>
+
+                        <div class="offer-card">
+                            <div class="offer-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+                            </div>
+                            <h3>Abertura de CAT</h3>
+                            <p>Abertura ágil e correta da Comunicação de Acidente de Trabalho no sistema, minimizando erros fiscais e burocráticos.</p>
+                        </div>
+
+                        <div class="offer-card">
+                            <div class="offer-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                            </div>
+                            <h3>Consultoria de Casos Especiais</h3>
+                            <p>Suporte e pareceres técnicos de nossa junta médica corporativa para lidar com afastamentos complexos ou de longa duração.</p>
+                        </div>
+
+                        <div class="offer-card">
+                            <div class="offer-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            </div>
+                            <h3>Visitas do Médico Colaborador</h3>
+                            <p>Deslocamento técnico do médico responsável diretamente para a empresa, limitado a 2 visitas anuais sob agendamento prévio.</p>
+                        </div>
+
+                        <div class="offer-card">
+                            <div class="offer-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>
+                            </div>
+                            <h3>Dashboard Anual</h3>
+                            <p>Relatório executivo estruturado anualmente contendo os indicadores de saúde coletados, as taxas de incidência e gráficos para tomadas de decisão.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= PRIVACY & LGPD ================= -->
+            <section class="section-privacy">
+                <div class="container">
+                    <div class="privacy-banner">
+                        <div class="privacy-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                        </div>
+                        <div class="privacy-content">
+                            <h3>Parceria Transparente & Conformidade LGPD</h3>
+                            <p>Todas as métricas operacionais obtidas e impressões médicas especializadas que possam ser compartilhadas são repassadas periodicamente ao RH. Nosso objetivo é garantir que a gestão corporativa esteja ciente sobre o bem-estar e o progresso clínico de seu colaborador.</p>
+                            <p style="margin-top: 10px;">Para a execução desse programa, as informações de saúde coletadas são estritamente protegidas por termos de confidencialidade com base na <strong>Lei Geral de Proteção de Dados (LGPD)</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
 
-        <footer id="footer-container"></footer>
+        <!-- ================= FOOTER ================= -->
+        <footer>
+          <div class="footer-top">
+            <div class="footer-brand">
+              <div class="logo">
+                <img src="/assets/images/Logo.png" class="logo-img" alt="Brasmed">
+              </div>
+              <p>Medicina e segurança ocupacional desde 2001, atuando em todo o Brasil com estrutura própria e rede credenciada.</p>
+              <a href="https://wa.me/551149635529" class="whatsapp-btn" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.7 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.2-3.5-.8-3-1.2-4.9-4.2-5.1-4.4-.1-.2-1.2-1.6-1.2-3s.8-2.2 1-2.5c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.2-.3.3-.1.6.2.3.9 1.5 1.9 2.4 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.6-.1l.7-.8c.2-.3.4-.2.7-.1l1.7.8c.2.1.4.2.5.3.1.2.1 1-.1 1.7z"/></svg>
+                Chamar no WhatsApp
+              </a>
+            </div>
+
+            <div class="footer-col">
+              <h4>Links Rápidos</h4>
+              <ul>
+                <li><a href="/#sobre">Quem Somos</a></li>
+                <li><a href="/#servicos">Serviços</a></li>
+                <li><a href="/rede-credenciada">Rede Credenciada</a></li>
+                <li><a href="/#servicos">Guia de Encaminhamento</a></li>
+                <li><a href="/#contato">Contato</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4>Contato</h4>
+              <ul>
+                <li><a href="tel:+551149635529">(11) 4963-5529</a></li>
+                <li><a href="https://wa.me/551149635529" target="_blank" rel="noopener">WhatsApp</a></li>
+                <li><span class="addr">Seg a Sex: 8h às 17h<br>Sáb, Dom e Feriado: fechado</span></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4>Endereço</h4>
+              <span class="addr">Rua Darcy Vargas, 319<br>Centro — Guarulhos - SP</span>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <p>© 2022 BRASMEDSAUDEOCUPACIONAL - Todos os direitos reservados</p>
+            <div class="footer-bottom-links">
+              <a href="#">Política de Privacidade</a>
+              <a href="#">Direitos Autorais</a>
+            </div>
+          </div>
+        </footer>
     </div>
+
     <!-- JS -->
     <script src="/assets/js/main.js" type="module"></script>
 </body>

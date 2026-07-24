@@ -1,27 +1,339 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brasmed - Medicina e SeguranÃ§a do Trabalho</title>
-    <meta name="description" content="Brasmed - SoluÃ§Ãµes em Medicina Ocupacional e SeguranÃ§a do Trabalho.">
+    <title>Atenção Psicossocial | Brasmed</title>
+    <meta name="description" content="Comunicado oficial sobre exames, testes e reabilitação psicossocial na sede da Brasmed em Guarulhos.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/components.css">
     <link rel="stylesheet" href="/assets/css/utilities.css">
+    <link rel="stylesheet" href="/assets/css/pages/psicossocial.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/images/logo.png">
 </head>
 <body>
     <div id="app">
-        <!-- Header / Navbar dynamically loaded or included -->
-        <header id="header-container"></header>
+        <!-- ================= NAVBAR ================= -->
+        <header class="navbar" id="navbar">
+          <!-- Logo — pinned to the far left -->
+          <a href="/" class="logo">
+            <img src="/assets/images/Logo.png" class="logo-img" alt="Brasmed">
+          </a>
+
+          <!-- Right-side: nav links + CTA -->
+          <div class="nav-right">
+            <nav class="nav-links" id="navLinks">
+              <div class="nav-item"><a href="/sobre/" class="nav-link">Quem Somos</a></div>
+              <div class="nav-item"><a href="https://drive.google.com/file/d/1UeKE1xHVaBGxzF2mYXe1Us-mmotlPUUt/view" target="_blank" class="nav-link">Apresentação</a></div>
+              <div class="nav-item"><a href="/rede-credenciada/" class="nav-link">Redes Credenciadas</a></div>
+
+              <div class="nav-item">
+                <button class="nav-link" type="button" aria-haspopup="true" aria-expanded="false">
+                  Serviços <span class="chevron"></span>
+                </button>
+                <div class="dropdown">
+                  <div class="dropdown-group">
+                    <div class="dropdown-group-title">Saúde Ocupacional</div>
+                    <a href="/saude-ocupacional/pcmso/">PCMSO</a>
+                    <a href="/saude-ocupacional/exames/">Exames Ocupacionais</a>
+                  </div>
+                  <div class="dropdown-divider"></div>
+                  <div class="dropdown-group">
+                    <div class="dropdown-group-title">Segurança do Trabalho</div>
+                    <a href="/seguranca-do-trabalho/ppp/">PPP</a>
+                    <a href="/seguranca-do-trabalho/pgr/">PGR</a>
+                    <a href="/seguranca-do-trabalho/ltcat/">LTCAT</a>
+                    <a href="/seguranca-do-trabalho/nrs/">Normas Regulamentadoras (NRs)</a>
+                    <a href="/seguranca-do-trabalho/treinamentos/">Treinamentos</a>
+                  </div>
+                  <div class="dropdown-divider"></div>
+                  <div class="dropdown-group">
+                    <div class="dropdown-group-title">Outros</div>
+                    <a href="/psicossocial/" class="nav-highlight">Atenção Psicossocial</a>
+                    <a href="/gestao-afastados/">Gestão de Afastados</a>
+                    <a href="/e-social/">e-Social</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="nav-item"><a href="/#contato" class="nav-link nav-highlight">Contato</a></div>
+            </nav>
+
+            <div class="nav-cta-group">
+              <a href="https://brasmed.prosesmt.com.br/login" target="_blank" class="btn btn-primary" style="padding:11px 22px;font-size:14px;">Guia de Encaminhamento</a>
+              <button class="nav-burger" id="burger" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <div id="top"></div>
+
+        <!-- ================= HERO ================= -->
+        <section class="psico-hero">
+            <div class="container hero-inner">
+                <span class="eyebrow">Comunicado & Serviços</span>
+                <h1>Atenção Psicossocial</h1>
+                <p class="subtitle">Avaliações Clínicas e Testes Psicológicos da Brasmed</p>
+            </div>
+        </section>
+
+        <!-- ================= PAGE NAV ================= -->
+        <nav class="page-toc" id="pageToc">
+          <div class="container">
+            <div class="page-toc-inner">
+              <span class="page-toc-label">Nesta página:</span>
+              <div class="page-toc-links">
+                <a href="#comunicado" class="page-toc-link active" data-target="comunicado">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  Comunicado
+                </a>
+                <a href="#escopo" class="page-toc-link" data-target="escopo">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                  Escopo de Atuação
+                </a>
+                <a href="#manuais" class="page-toc-link" data-target="manuais">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+                  Guias e Manuais
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
 
         <main>
-            <h1>AvaliaÃ§Ã£o Psicossocial - Brasmed</h1>
+            <!-- ================= COMUNICADO & DETAILS ================= -->
+            <section class="section-psico" id="comunicado">
+                <div class="container psico-grid">
+                    <!-- Letterhead / Circular style card -->
+                    <div class="comunicado-card">
+                        <div class="comunicado-header">
+                            <h2>Comunicado às Empresas Parceiras</h2>
+                            <div class="comunicado-date">Guarulhos, 18 de junho de 2025</div>
+                        </div>
+                        <div class="comunicado-body">
+                            <p>Comunicamos às nossas Empresas parceiras que, a partir de <strong>01/07/2025</strong>, os <strong>"Testes Psicológicos"</strong> passarão a ser realizados exclusivamente na sede própria da Brasmed Saúde e Segurança Ocupacional.</p>
+                            
+                            <p>Com a centralização da realização dos Testes Psicológicos na sede da Brasmed, nosso objetivo principal é <strong>minimizar o tempo de deslocamento do colaborador</strong>, oferecendo a certeza jurídica e técnica de que ele realizará os testes adequados sempre que necessário e solicitado pela Empresa parceira.</p>
+                            
+                            <p>Ficamos à inteira disposição de nossos parceiros comerciais e equipes de RH para prestar quaisquer esclarecimentos operacionais adicionais.</p>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar info cards -->
+                    <div class="psico-sidebar">
+                        <div class="info-card">
+                            <h3 class="info-card-title">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                                Horário de Atendimento
+                            </h3>
+                            <div class="info-list">
+                                <div class="info-item">
+                                    <div class="info-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                    </div>
+                                    <div class="info-text">
+                                        <h4>Dias da Semana</h4>
+                                        <p>De segunda a sexta-feira (exceto feriados).</p>
+                                    </div>
+                                </div>
+
+                                <div class="info-item">
+                                    <div class="info-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                                    </div>
+                                    <div class="info-text">
+                                        <h4>Janela de Horário</h4>
+                                        <p>Das <strong>08h00 às 12h00</strong>.</p>
+                                    </div>
+                                </div>
+
+                                <div class="info-item">
+                                    <div class="info-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                                    </div>
+                                    <div class="info-text">
+                                        <h4>Fluxo de Entrada</h4>
+                                        <p>O atendimento será realizado por <b>ordem de chegada</b> do colaborador na recepção da Brasmed.</p>
+                                    </div>
+                                </div>
+
+                                <div class="info-item">
+                                    <div class="info-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                    </div>
+                                    <div class="info-text">
+                                        <h4>Localização da Sede</h4>
+                                        <p>Rua Darcy Vargas, 319 – Jd. Zaira – Centro – Guarulhos/SP.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= SERVICES ================= -->
+            <section class="section-psico-alt" id="escopo">
+                <div class="container">
+                    <div class="services-section-title">
+                        <span class="eyebrow">Escopo de Atuação</span>
+                        <h2>Serviços em Psicologia Ocupacional</h2>
+                        <p>Além dos testes admissões e periódicos na sede, prestamos atendimento continuado focado na integridade psicossocial dos trabalhadores.</p>
+                    </div>
+
+                    <div class="psico-services-grid">
+                        <div class="psico-service-card">
+                            <div class="psico-service-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                            </div>
+                            <h3>Avaliação Psicossocial</h3>
+                            <p>Exame obrigatório voltado à verificação do perfil psicológico do trabalhador para a realização de atividades de risco (trabalho em altura, espaço confinado, etc.).</p>
+                        </div>
+
+                        <div class="psico-service-card">
+                            <div class="psico-service-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                            </div>
+                            <h3>Terapia Psicossocial</h3>
+                            <p>Sessões clínicas de acolhimento e suporte emocional voltadas ao tratamento de estresse, ansiedade e outros agravos comuns à rotina corporativa, com autorização prévia da empresa.</p>
+                        </div>
+
+                        <div class="psico-service-card">
+                            <div class="psico-service-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
+                            <h3>Reabilitação Psicossocial</h3>
+                            <p>Acompanhamento médico e psicológico especializado para dar suporte à reintegração saudável e segura do colaborador ao ambiente de trabalho pós-afastamento.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= DOWNLOADS ================= -->
+            <section class="section-psico" id="manuais">
+                <div class="container">
+                    <div class="download-section-title">
+                        <span class="eyebrow">Material Técnico</span>
+                        <h2>Guias e Manuais Técnicos</h2>
+                        <p>Baixe nossos materiais de suporte para entender melhor a prevenção de riscos e a aplicação da NR-1.</p>
+                    </div>
+
+                    <div class="download-grid">
+                        <!-- Manual NR-1 -->
+                        <a href="https://drive.google.com/file/d/1ZMbP8v47ZEA5Ads-g712TRTL9npmvdnN/view" target="_blank" rel="noopener" class="download-card">
+                            <div class="download-info">
+                                <div class="download-file-icon">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+                                </div>
+                                <div class="download-text">
+                                    <h4>Manual de Aplicação Cap. 1.5 da NR-1</h4>
+                                    <p>PDF · Manual oficial de interpretação dos riscos</p>
+                                </div>
+                            </div>
+                            <div class="download-btn">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                            </div>
+                        </a>
+
+                        <!-- Guia Riscos Psicossociais -->
+                        <a href="https://drive.google.com/file/d/1lirfT3t5hZ8HGbFnIa89r4_GFWtoN3U8/view" target="_blank" rel="noopener" class="download-card">
+                            <div class="download-info">
+                                <div class="download-file-icon">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+                                </div>
+                                <div class="download-text">
+                                    <h4>Guia de Riscos Psicossociais</h4>
+                                    <p>PDF · Documento técnico orientador da Brasmed</p>
+                                </div>
+                            </div>
+                            <div class="download-btn">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
         </main>
 
-        <footer id="footer-container"></footer>
+        <!-- ================= FOOTER ================= -->
+        <footer>
+          <div class="footer-top">
+            <div class="footer-brand">
+              <div class="logo">
+                <img src="/assets/images/Logo.png" class="logo-img" alt="Brasmed">
+              </div>
+              <p>Medicina e segurança ocupacional desde 2001, atuando em todo o Brasil com estrutura própria e rede credenciada.</p>
+              <a href="https://wa.me/551149635529" class="whatsapp-btn" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.7 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.2-3.5-.8-3-1.2-4.9-4.2-5.1-4.4-.1-.2-1.2-1.6-1.2-3s.8-2.2 1-2.5c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.2-.3.3-.1.6.2.3.9 1.5 1.9 2.4 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.6-.1l.7-.8c.2-.3.4-.2.7-.1l1.7.8c.2.1.4.2.5.3.1.2.1 1-.1 1.7z"/></svg>
+                Chamar no WhatsApp
+              </a>
+            </div>
+
+            <div class="footer-col">
+              <h4>Links Rápidos</h4>
+              <ul>
+                <li><a href="/#sobre">Quem Somos</a></li>
+                <li><a href="https://drive.google.com/file/d/1UeKE1xHVaBGxzF2mYXe1Us-mmotlPUUt/view" target="_blank">Apresentação</a></li>
+                <li><a href="/rede-credenciada">Rede Credenciada</a></li>
+                <li><a href="/#servicos">Guia de Encaminhamento</a></li>
+                <li><a href="/#contato">Contato</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4>Contato</h4>
+              <ul>
+                <li><a href="tel:+551149635529">(11) 4963-5529</a></li>
+                <li><a href="https://wa.me/551149635529" target="_blank" rel="noopener">WhatsApp</a></li>
+                <li><span class="addr">Seg a Sex: 8h às 17h<br>Sáb, Dom e Feriado: fechado</span></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4>Endereço</h4>
+              <span class="addr">Rua Darcy Vargas, 319<br>Centro — Guarulhos - SP</span>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <p>© 2022 BRASMEDSAUDEOCUPACIONAL - Todos os direitos reservados</p>
+            <div class="footer-bottom-links">
+              <a href="#">Política de Privacidade</a>
+              <a href="#">Direitos Autorais</a>
+            </div>
+          </div>
+        </footer>
     </div>
+
     <!-- JS -->
     <script src="/assets/js/main.js" type="module"></script>
+    <script>
+      // Page TOC – highlight active section on scroll
+      (function () {
+        const sections = ['comunicado', 'escopo', 'manuais'].map(id => document.getElementById(id)).filter(Boolean);
+        const links = document.querySelectorAll('.page-toc-link');
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              links.forEach(l => l.classList.remove('active'));
+              const active = document.querySelector(`.page-toc-link[data-target="${entry.target.id}"]`);
+              if (active) active.classList.add('active');
+            }
+          });
+        }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+        sections.forEach(s => observer.observe(s));
+      })();
+    </script>
 </body>
 </html>

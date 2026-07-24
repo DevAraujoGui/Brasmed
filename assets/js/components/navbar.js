@@ -29,15 +29,21 @@ export function initNavbar() {
     }
   });
 
-  // ---- Mobile burger (simple toggle of nav-links visibility) ----
+  // ---- Mobile burger (simple toggle of nav-links class) ----
   const burger = document.getElementById('burger');
   const navLinks = document.getElementById('navLinks');
   if (burger && navLinks) {
     burger.addEventListener('click', () => {
-      const showing = navLinks.style.display === 'flex';
-      navLinks.style.cssText = showing
-        ? ''
-        : 'display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;background:rgba(15,23,42,.97);padding:12px 6vw 20px;gap:2px;';
+      burger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+
+    // Close menu when clicking on a direct link
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        burger.classList.remove('open');
+        navLinks.classList.remove('open');
+      });
     });
   }
 }
