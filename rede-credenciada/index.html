@@ -3,17 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rede Credenciada | Brasmed</title>
+<title>Rede Credenciada Nacional | Brasmed Saúde Ocupacional</title>
+<meta name="description" content="Encontre clínicas credenciadas e consultórios médicos da Brasmed em todo o Brasil para realização de exames admissionais, periódicos e complementares.">
+
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
 <!-- CSS files -->
 <link rel="stylesheet" href="/assets/css/global.css">
 <link rel="stylesheet" href="/assets/css/components.css">
 <link rel="stylesheet" href="/assets/css/utilities.css">
 <link rel="stylesheet" href="/assets/css/pages/rede-credenciada.css">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="/assets/images/logo.png">
 </head>
 <body>
+<div id="app">
 
 <!-- ================= NAVBAR ================= -->
 <header class="navbar" id="navbar">
@@ -26,8 +34,8 @@
   <div class="nav-right">
     <nav class="nav-links" id="navLinks">
       <div class="nav-item"><a href="/#sobre" class="nav-link">Quem Somos</a></div>
-      <div class="nav-item"><a href="/#sobre" class="nav-link">Apresentação</a></div>
-      <div class="nav-item"><a href="/rede-credenciada" class="nav-link">Redes Credenciadas</a></div>
+      <div class="nav-item"><a href="https://drive.google.com/file/d/1UeKE1xHVaBGxzF2mYXe1Us-mmotlPUUt/view" target="_blank" class="nav-link">Apresentação</a></div>
+      <div class="nav-item"><a href="/rede-credenciada/" class="nav-link active">Redes Credenciadas</a></div>
 
       <div class="nav-item">
         <button class="nav-link" type="button" aria-haspopup="true" aria-expanded="false">
@@ -36,33 +44,33 @@
         <div class="dropdown">
           <div class="dropdown-group">
             <div class="dropdown-group-title">Saúde Ocupacional</div>
-            <a href="/#servicos">PCMSO</a>
-            <a href="/#servicos">Exames Ocupacionais</a>
+            <a href="/saude-ocupacional/pcmso/">PCMSO</a>
+            <a href="/saude-ocupacional/exames/">Exames Ocupacionais</a>
           </div>
           <div class="dropdown-divider"></div>
           <div class="dropdown-group">
             <div class="dropdown-group-title">Segurança do Trabalho</div>
-            <a href="/#servicos">PPP</a>
-            <a href="/#servicos">PGR</a>
-            <a href="/#servicos">LTCAT</a>
-            <a href="/#servicos">Normas Regulamentadoras (NRs)</a>
-            <a href="/#servicos">Treinamentos</a>
+            <a href="/seguranca-do-trabalho/ppp/">PPP</a>
+            <a href="/seguranca-do-trabalho/pgr/">PGR</a>
+            <a href="/seguranca-do-trabalho/ltcat/">LTCAT</a>
+            <a href="/seguranca-do-trabalho/nrs/">Normas Regulamentadoras (NRs)</a>
+            <a href="/seguranca-do-trabalho/treinamentos/">Treinamentos</a>
           </div>
           <div class="dropdown-divider"></div>
           <div class="dropdown-group">
             <div class="dropdown-group-title">Outros</div>
-            <a href="/#servicos">Atenção Psicossocial</a>
-            <a href="/#servicos">Gestão de Afastados</a>
-            <a href="/#servicos">e-Social</a>
+            <a href="/psicossocial/">Atenção Psicossocial</a>
+            <a href="/gestao-afastados/">Gestão de Afastados</a>
+            <a href="/e-social/">e-Social</a>
           </div>
         </div>
       </div>
 
-      <div class="nav-item"><a href="/#servicos" class="nav-link nav-highlight">Guia de Encaminhamento</a></div>
+      <div class="nav-item"><a href="/#contato" class="nav-link nav-highlight">Contato</a></div>
     </nav>
 
     <div class="nav-cta-group">
-      <a href="/#contato" class="btn btn-primary" style="padding:11px 22px;font-size:14px;">Contato</a>
+      <a href="https://brasmed.prosesmt.com.br/login" target="_blank" class="btn btn-primary" style="padding:11px 22px;font-size:14px;">Guia de Encaminhamento</a>
       <button class="nav-burger" id="burger" aria-label="Abrir menu">
         <span></span><span></span><span></span>
       </button>
@@ -74,151 +82,91 @@
 
 <!-- ================= HERO ================= -->
 <section class="network-hero">
-  <h1>Rede Credenciada Brasmed</h1>
-  <p>Atendimento amplo e qualificado em todo o Brasil. Selecione o estado no mapa ou busque pela sua cidade para encontrar nossas unidades de exames complementares e consultórios médicos.</p>
-</section>
-
-<!-- ================= MAP SECTION ================= -->
-<section class="map-wrapper container">
-  <div class="map-container">
-    <div class="map-tooltip" id="mapTooltip">Acre</div>
-    <svg viewBox="0 0 500 500" class="map-svg">
-      <!-- Stylized outline representation of Brazil -->
-      <path class="map-bg-path" d="M167,49 C190,40 214,40 230,47 C246,54 260,49 276,64 C292,79 330,76 345,95 C360,114 415,119 435,142 C455,165 470,210 425,250 C380,290 395,335 345,385 C295,435 270,470 230,490 C190,510 180,480 160,445 C140,410 120,400 90,390 C60,380 40,320 60,280 C80,240 50,190 70,165 C90,140 100,105 130,95 Z" />
-
-      <!-- Glowing pins for the 25 active states + DF -->
-      <g class="map-pin" data-uf="AC" data-state="Acre">
-        <circle class="pin-pulse" cx="65" cy="225" r="7" />
-        <circle class="pin-core" cx="65" cy="225" r="4.5" />
-      </g>
-      <g class="map-pin" data-uf="AM" data-state="Amazonas">
-        <circle class="pin-pulse" cx="120" cy="170" r="7" />
-        <circle class="pin-core" cx="120" cy="170" r="4.5" />
-      </g>
-      <g class="map-pin" data-uf="RR" data-state="Roraima">
-        <circle class="pin-pulse" cx="135" cy="80" r="7" />
-        <circle class="pin-core" cx="135" cy="80" r="4.5" />
-      </g>
-      <g class="map-pin" data-uf="RO" data-state="Rondônia">
-        <circle class="pin-pulse" cx="125" cy="245" r="7" />
-        <circle class="pin-core" cx="125" cy="245" r="4.5" />
-      </g>
-      <g class="map-pin" data-uf="AP" data-state="Amapá">
-        <circle class="pin-pulse" cx="245" cy="90" r="7" />
-        <circle class="pin-core" cx="245" cy="90" r="4.5" />
-      </g>
-      <g class="map-pin" data-uf="PA" data-state="Pará">
-        <circle class="pin-pulse" cx="230" cy="170" r="7" />
-        <circle class="pin-core" cx="230" cy="170" r="4.5" />
-      </g>
-      <g class="map-pin" data-uf="TO" data-state="Tocantins">
-        <circle class="pin-pulse" cx="275" cy="230" r="7" />
-        <circle class="pin-core" cx="275" cy="230" r="4.5" />
-      </g>
-      <g class="map-pin" data-uf="MA" data-state="Maranhão">
-        <circle class="pin-pulse" cx="300" cy="165" r="7" />
-        <circle class="pin-core" cx="300" cy="165" r="4.5" />
-      </g>
-      <g class="map-pin" data-uf="PI" data-state="Piauí">
-        <circle class="pin-pulse" cx="325" cy="190" r="7" />
-        <circle class="pin-core" cx="325" cy="190" r="4.5" />
-      </g>
-      <g class="map-pin" data-uf="CE" data-state="Ceará">
-        <circle class="pin-pulse" cx="355" cy="155" r="7" />
-        <circle class="pin-core" cx="355" cy="155" r="4.5" />
-      </g>
-      <g class="map-pin" data-uf="RN" data-state="Rio Grande do Norte">
-        <circle class="pin-pulse" cx="390" cy="165" r="7" />
-        <circle class="pin-core" cx="390" cy="165" r="4.5" />
-      </g>
-      <g class="map-pin" data-uf="PB" data-state="Paraíba">
-        <circle class="pin-pulse" cx="395" cy="185" r="7" />
-        <circle class="pin-core" cx="395" cy="185" r="4.5" />
-      </g>
-      <g class="map-pin" data-uf="PE" data-state="Pernambuco">
-        <circle class="pin-pulse" cx="380" cy="205" r="7" />
-        <circle class="pin-core" cx="380" cy="205" r="4.5" />
-      </g>
-      <g class="map-pin" data-uf="SE" data-state="Sergipe">
-        <circle class="pin-pulse" cx="375" cy="230" r="7" />
-        <circle class="pin-core" cx="375" cy="230" r="4.5" />
-      </g>
-      <g class="map-pin" data-uf="BA" data-state="Bahia">
-        <circle class="pin-pulse" cx="335" cy="245" r="7" />
-        <circle class="pin-core" cx="335" cy="245" r="4.5" />
-      </g>
-      <g class="map-pin" data-uf="MT" data-state="Mato Grosso">
-        <circle class="pin-pulse" cx="205" cy="270" r="7" />
-        <circle class="pin-core" cx="205" cy="270" r="4.5" />
-      </g>
-      <g class="map-pin" data-uf="GO" data-state="Goiás">
-        <circle class="pin-pulse" cx="260" cy="300" r="7" />
-        <circle class="pin-core" cx="260" cy="300" r="4.5" />
-      </g>
-      <g class="map-pin" data-uf="DF" data-state="Distrito Federal">
-        <circle class="pin-pulse" cx="280" cy="290" r="7" />
-        <circle class="pin-core" cx="280" cy="290" r="4.5" />
-      </g>
-      <g class="map-pin" data-uf="MS" data-state="Mato Grosso do Sul">
-        <circle class="pin-pulse" cx="205" cy="350" r="7" />
-        <circle class="pin-core" cx="205" cy="350" r="4.5" />
-      </g>
-      <g class="map-pin" data-uf="MG" data-state="Minas Gerais">
-        <circle class="pin-pulse" cx="315" cy="335" r="7" />
-        <circle class="pin-core" cx="315" cy="335" r="4.5" />
-      </g>
-      <g class="map-pin" data-uf="ES" data-state="Espírito Santo">
-        <circle class="pin-pulse" cx="360" cy="345" r="7" />
-        <circle class="pin-core" cx="360" cy="345" r="4.5" />
-      </g>
-      <g class="map-pin" data-uf="RJ" data-state="Rio de Janeiro">
-        <circle class="pin-pulse" cx="340" cy="375" r="7" />
-        <circle class="pin-core" cx="340" cy="375" r="4.5" />
-      </g>
-      <g class="map-pin" data-uf="SP" data-state="São Paulo">
-        <circle class="pin-pulse" cx="280" cy="380" r="7" />
-        <circle class="pin-core" cx="280" cy="380" r="4.5" />
-      </g>
-      <g class="map-pin" data-uf="PR" data-state="Paraná">
-        <circle class="pin-pulse" cx="235" cy="415" r="7" />
-        <circle class="pin-core" cx="235" cy="415" r="4.5" />
-      </g>
-      <g class="map-pin" data-uf="SC" data-state="Santa Catarina">
-        <circle class="pin-pulse" cx="250" cy="440" r="7" />
-        <circle class="pin-core" cx="250" cy="440" r="4.5" />
-      </g>
-      <g class="map-pin" data-uf="RS" data-state="Rio Grande do Sul">
-        <circle class="pin-pulse" cx="230" cy="470" r="7" />
-        <circle class="pin-core" cx="230" cy="470" r="4.5" />
-      </g>
-    </svg>
+  <div class="container network-hero-inner">
+    <span class="eyebrow">Cobertura Nacional</span>
+    <h1>Rede Credenciada Brasmed</h1>
+    <p>Atendimento amplo e qualificado em todo o Brasil. Explore por região, estado ou busque sua cidade para encontrar clínicas e consultórios médicos parceiros.</p>
+    
+    <!-- Metric Badges -->
+    <div class="network-stats-bar">
+      <div class="network-stat-pill">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span id="totalCitiesCount">200+ Cidades Atendidas</span>
+      </div>
+      <div class="network-stat-pill">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+        <span id="totalStatesCount">25+ Estados e DF</span>
+      </div>
+      <div class="network-stat-pill">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>Exames Ocupacionais & Clínicos</span>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ================= DASHBOARD ================= -->
-<main class="dashboard-container">
-  <!-- Sticky Sidebar Filters -->
-  <aside class="sidebar-sticky">
-    <!-- City Search -->
-    <div class="search-box">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <input type="text" id="searchNetwork" placeholder="Pesquisar cidade ou estado...">
-    </div>
+<!-- ================= MAP SECTION ================= -->
+<section class="map-showcase-section">
+  <div class="container">
+    <div class="map-showcase-card">
+      <div class="map-info-side">
+        <span class="eyebrow">Mapa Interativo</span>
+        <h2>Presença em Todo o Território Nacional</h2>
+        <p>Com clínicas parceiras credenciadas e estrutura própria, garantimos agilidade na realização de ASOs, audiometrias, espirometrias, exames laboratoriais e radiológicos.</p>
+        
+        <div class="map-legend">
+          <div class="map-legend-item">
+            <div class="map-legend-dot"></div>
+            <span>Passe o mouse ou clique no pin do mapa para filtrar a região</span>
+          </div>
+          <div class="map-legend-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--green);"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Padronização e transmissão direta para o e-Social (S-2220)</span>
+          </div>
+        </div>
+      </div>
 
-    <!-- State Pills Box -->
-    <div class="state-filters-box">
-      <h3>Filtrar por Estado</h3>
-      <div class="state-pill-list" id="statePillList">
-        <!-- Pills loaded dynamically by JS -->
+      <div class="map-image-wrapper">
+        <img src="/assets/images/mapaBrasmed.png" alt="Mapa de Cobertura das Unidades Credenciadas Brasmed por Região do Brasil" class="map-photo-img">
       </div>
     </div>
-  </aside>
+  </div>
+</section>
 
-  <!-- Interactive Grid Results -->
-  <section class="results-section" id="networkResults">
-    <!-- Cards loaded dynamically by JS -->
-  </section>
-</main>
+<!-- ================= DYNAMIC EXPLORER DASHBOARD ================= -->
+<section class="dashboard-section">
+  <div class="container dashboard-container">
+    <!-- Controls (Search + Region Tabs + State Pills) -->
+    <div class="explorer-controls">
+      <!-- Search -->
+      <div class="search-bar-wrap">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="searchNetwork" placeholder="Digite o nome da sua cidade ou estado (ex: Campinas, Belo Horizonte, Manaus...)">
+      </div>
+
+      <!-- Region Filter Tabs -->
+      <div class="region-tabs-group">
+        <span class="region-tabs-label">Região:</span>
+        <button type="button" class="region-tab-btn active" data-region="TODAS">Todas as Regiões</button>
+        <button type="button" class="region-tab-btn" data-region="Sudeste">Sudeste</button>
+        <button type="button" class="region-tab-btn" data-region="Sul">Sul</button>
+        <button type="button" class="region-tab-btn" data-region="Nordeste">Nordeste</button>
+        <button type="button" class="region-tab-btn" data-region="Centro-Oeste">Centro-Oeste</button>
+        <button type="button" class="region-tab-btn" data-region="Norte">Norte</button>
+      </div>
+
+      <!-- State Pills -->
+      <div class="state-pills-row" id="statePillList">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+
+    <!-- Results Cards -->
+    <div class="results-grid" id="networkResults">
+      <!-- Injected via JS -->
+    </div>
+  </div>
+</section>
 
 <!-- ================= FOOTER ================= -->
 <footer>
@@ -238,9 +186,9 @@
       <h4>Links Rápidos</h4>
       <ul>
         <li><a href="/#sobre">Quem Somos</a></li>
-        <li><a href="/#servicos">Serviços</a></li>
-        <li><a href="/rede-credenciada">Rede Credenciada</a></li>
-        <li><a href="/#servicos">Guia de Encaminhamento</a></li>
+        <li><a href="https://drive.google.com/file/d/1UeKE1xHVaBGxzF2mYXe1Us-mmotlPUUt/view" target="_blank">Apresentação</a></li>
+        <li><a href="/rede-credenciada/">Rede Credenciada</a></li>
+        <li><a href="https://brasmed.prosesmt.com.br/login" target="_blank">Guia de Encaminhamento</a></li>
         <li><a href="/#contato">Contato</a></li>
       </ul>
     </div>
@@ -261,13 +209,13 @@
   </div>
 
   <div class="footer-bottom">
-    <p>© 2022 BRASMEDSAUDEOCUPACIONAL - Todos os direitos reservados</p>
+    <p>© 2026 Brasmed Saúde Ocupacional - Todos os direitos reservados</p>
     <div class="footer-bottom-links">
-      <a href="#">Política de Privacidade</a>
-      <a href="#">Direitos Autorais</a>
+      <a href="/politica-de-privacidade/">Política de Privacidade</a>
     </div>
   </div>
 </footer>
+</div>
 
 <!-- JavaScript files -->
 <script src="/assets/js/main.js" type="module"></script>

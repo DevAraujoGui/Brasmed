@@ -1,26 +1,587 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brasmed - Medicina e SeguranÃ§a do Trabalho</title>
-    <meta name="description" content="Brasmed - SoluÃ§Ãµes em Medicina Ocupacional e SeguranÃ§a do Trabalho.">
+    <title>Normas Regulamentadoras (NRs) - Guia Completo e Atualizado | Brasmed</title>
+    <meta name="description" content="Consulte todas as Normas Regulamentadoras (NR 01 a NR 37) de Segurança e Medicina do Trabalho. Assessoria técnica e conformidade legal com a Brasmed.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/components.css">
     <link rel="stylesheet" href="/assets/css/utilities.css">
+    <link rel="stylesheet" href="/assets/css/pages/seguranca.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/images/logo.png">
 </head>
 <body>
     <div id="app">
-        <!-- Header / Navbar dynamically loaded or included -->
-        <header id="header-container"></header>
+        <!-- ================= NAVBAR ================= -->
+        <header class="navbar" id="navbar">
+          <a href="/" class="logo">
+            <img src="/assets/images/Logo.png" class="logo-img" alt="Brasmed">
+          </a>
+
+          <div class="nav-right">
+            <nav class="nav-links" id="navLinks">
+              <div class="nav-item"><a href="/#sobre" class="nav-link">Quem Somos</a></div>
+              <div class="nav-item"><a href="https://drive.google.com/file/d/1UeKE1xHVaBGxzF2mYXe1Us-mmotlPUUt/view" target="_blank" class="nav-link">Apresentação</a></div>
+              <div class="nav-item"><a href="/rede-credenciada/" class="nav-link">Redes Credenciadas</a></div>
+
+              <div class="nav-item">
+                <button class="nav-link active" type="button" aria-haspopup="true" aria-expanded="false">
+                  Serviços <span class="chevron"></span>
+                </button>
+                <div class="dropdown">
+                  <div class="dropdown-group">
+                    <div class="dropdown-group-title">Saúde Ocupacional</div>
+                    <a href="/saude-ocupacional/pcmso/">PCMSO</a>
+                    <a href="/saude-ocupacional/exames/">Exames Ocupacionais</a>
+                  </div>
+                  <div class="dropdown-divider"></div>
+                  <div class="dropdown-group">
+                    <div class="dropdown-group-title">Segurança do Trabalho</div>
+                    <a href="/seguranca-do-trabalho/ppp/">PPP</a>
+                    <a href="/seguranca-do-trabalho/pgr/">PGR</a>
+                    <a href="/seguranca-do-trabalho/ltcat/">LTCAT</a>
+                    <a href="/seguranca-do-trabalho/nrs/" class="nav-highlight">Normas Regulamentadoras (NRs)</a>
+                    <a href="/seguranca-do-trabalho/treinamentos/">Treinamentos</a>
+                  </div>
+                  <div class="dropdown-divider"></div>
+                  <div class="dropdown-group">
+                    <div class="dropdown-group-title">Outros</div>
+                    <a href="/psicossocial/">Atenção Psicossocial</a>
+                    <a href="/gestao-afastados/">Gestão de Afastados</a>
+                    <a href="/e-social/">e-Social</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="nav-item"><a href="/#contato" class="nav-link nav-highlight">Contato</a></div>
+            </nav>
+
+            <div class="nav-cta-group">
+              <a href="https://brasmed.prosesmt.com.br/login" target="_blank" class="btn btn-primary" style="padding:11px 22px;font-size:14px;">Guia de Encaminhamento</a>
+              <button class="nav-burger" id="burger" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <div id="top"></div>
+
+        <!-- ================= HERO ================= -->
+        <section class="seg-hero">
+            <div class="container hero-inner">
+                <span class="eyebrow">Legislação e Prevenção</span>
+                <h1>Normas Regulamentadoras (NRs)</h1>
+                <p class="subtitle">Guia oficial de obrigações, direitos e deveres em Segurança e Saúde no Trabalho</p>
+            </div>
+        </section>
 
         <main>
-            <h1>Normas Regulamentadoras (NRs) - Brasmed</h1>
+            <!-- ================= INTRO ================= -->
+            <section class="section-seg">
+                <div class="container seg-intro-grid">
+                    <div class="seg-title-block">
+                        <span class="eyebrow">Disposições Complementares CLT</span>
+                        <h2>O que são as Normas Regulamentadoras?</h2>
+                        <p>As <strong>Normas Regulamentadoras (NR)</strong> são disposições complementares ao Capítulo V da CLT, consistindo em obrigações, direitos e deveres a serem cumpridos por empregadores e trabalhadores com o objetivo de garantir um ambiente de trabalho seguro e sadio, prevenindo a ocorrência de doenças ocupacionais e acidentes de trabalho.</p>
+                        <p>A Brasmed assessora empresas na implantação técnica, laudos periciais, comissões internas e programas exigidos por cada uma das NRs vigentes.</p>
+                    </div>
+
+                    <div class="seg-highlight-box">
+                        <div class="seg-feature-item">
+                            <div class="seg-feature-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
+                            <div class="seg-feature-content">
+                                <h4>Prevenção e Conformidade</h4>
+                                <p>Mitigação de riscos laborais e adequação contínua aos padrões fiscais do MTE e Previdência Social.</p>
+                            </div>
+                        </div>
+
+                        <div class="seg-feature-item">
+                            <div class="seg-feature-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+                            </div>
+                            <div class="seg-feature-content">
+                                <h4>Redução de Passivos e Multas</h4>
+                                <p>Eliminação de autuações e processos trabalhistas com documentação e treinamentos atualizados.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= INTERACTIVE NRs GRID ================= -->
+            <section class="section-seg-alt">
+                <div class="container">
+                    <div style="text-align: center; max-width: 750px; margin: 0 auto 30px;">
+                        <span class="eyebrow">Consulta Rápida</span>
+                        <h2>Catálogo de Normas Regulamentadoras</h2>
+                        <p style="color: var(--text-soft); font-size: 15.5px;">Selecione qualquer norma abaixo para abrir a legislação oficial completa em uma nova guia.</p>
+                    </div>
+
+                    <!-- Search Bar -->
+                    <div class="nrs-search-container">
+                        <svg class="nrs-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        <input type="text" id="nrSearchInput" class="nrs-search-input" placeholder="Buscar por número (ex: NR 10, NR 35) ou assunto...">
+                    </div>
+
+                    <div class="nrs-grid" id="nrsGrid">
+                        <!-- NR 1 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr1.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 01 NR 1">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 01</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Disposições Gerais e Gerenciamento de Riscos Ocupacionais (GRO)</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 2 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr2.htm" target="_blank" rel="noopener noreferrer" class="nr-card revoked" data-nr="NR 02 NR 2">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 02 (Revogada)</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Inspeção Prévia (Revogada pela Portaria SEPRT n.º 915/2019)</div>
+                            <span class="nr-link-label">Ver Histórico &rarr;</span>
+                        </a>
+
+                        <!-- NR 3 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr3.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 03 NR 3">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 03</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Embargo e Interdição</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 4 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr4.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 04 NR 4">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 04</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Serviços Especializados em Segurança e em Medicina do Trabalho (SESMT)</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 5 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr5.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 05 NR 5">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 05</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Comissão Interna de Prevenção de Acidentes e Assédio (CIPA)</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 6 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr6.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 06 NR 6">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 06</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Equipamentos de Proteção Individual (EPI)</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 7 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr7.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 07 NR 7">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 07</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Programa de Controle Médico de Saúde Ocupacional (PCMSO)</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 8 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr8.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 08 NR 8">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 08</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Edificações</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 9 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr9.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 09 NR 9">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 09</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Avaliação e Controle das Exposições Ocupacionais a Agentes Físicos, Químicos e Biológicos</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 10 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr10.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 10">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 10</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Segurança em Instalações e Serviços em Eletricidade</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 11 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr11.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 11">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 11</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Transporte, Movimentação, Armazenagem e Manuseio de Materiais</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 12 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr12.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 12">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 12</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Segurança no Trabalho em Máquinas e Equipamentos</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 13 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr13.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 13">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 13</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Caldeiras, Vasos de Pressão, Tubulações e Tanques Metálicos de Armazenamento</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 14 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr14.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 14">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 14</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Fornos</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 15 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr15.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 15">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 15</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Atividades e Operações Insalubres</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 16 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr16.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 16">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 16</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Atividades e Operações Perigosas</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 17 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr17.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 17">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 17</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Ergonomia e Avaliação Ergonômica do Trabalho (AET)</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 18 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr18.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 18">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 18</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Segurança e Saúde no Trabalho na Indústria da Construção</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 19 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr19.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 19">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 19</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Explosivos</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 20 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr20.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 20">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 20</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Segurança e Saúde no Trabalho com Inflamáveis e Combustíveis</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 21 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr21.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 21">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 21</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Trabalhos a Céu Aberto</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 22 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr22.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 22">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 22</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Segurança e Saúde Ocupacional na Mineração</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 23 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr23.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 23">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 23</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Proteção Contra Incêndios</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 24 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr24.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 24">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 24</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Condições Sanitárias e de Conforto nos Locais de Trabalho</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 25 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr25.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 25">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 25</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Resíduos Industriais</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 26 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr26.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 26">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 26</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Sinalização de Segurança</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 27 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr27.htm" target="_blank" rel="noopener noreferrer" class="nr-card revoked" data-nr="NR 27">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 27 (Revogada)</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Registro Profissional do Técnico de Segurança do Trabalho no MTE (Revogada pela Portaria GM n.º 262/2008)</div>
+                            <span class="nr-link-label">Ver Histórico &rarr;</span>
+                        </a>
+
+                        <!-- NR 28 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr28.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 28">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 28</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Fiscalização e Penalidades</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 29 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr29.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 29">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 29</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Segurança e Saúde no Trabalho Portuário</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 30 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr30.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 30">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 30</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Segurança e Saúde no Trabalho Aquaviário</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 31 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr31.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 31">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 31</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Segurança e Saúde no Trabalho na Agricultura, Pecuária, Silvicultura, Exploração Florestal e Aquicultura</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 32 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr32.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 32">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 32</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Segurança e Saúde no Trabalho em Serviços de Saúde</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 33 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr33.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 33">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 33</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Segurança e Saúde nos Trabalhos em Espaços Confinados</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 34 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr34.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 34">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 34</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Condições e Meio Ambiente de Trabalho na Indústria da Construção, Reparação e Desmonte Naval</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 35 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr35.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 35">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 35</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Trabalho em Altura</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 36 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr36.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 36">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 36</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Segurança e Saúde no Trabalho em Empresas de Abate e Processamento de Carnes e Derivados</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+
+                        <!-- NR 37 -->
+                        <a href="https://www.guiatrabalhista.com.br/legislacao/nr/nr37.htm" target="_blank" rel="noopener noreferrer" class="nr-card" data-nr="NR 37">
+                            <div class="nr-card-header">
+                                <span class="nr-badge">NR 37</span>
+                                <div class="nr-card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+                            </div>
+                            <div class="nr-title">Segurança e Saúde em Plataformas de Petróleo</div>
+                            <span class="nr-link-label">Ver Norma Oficial &rarr;</span>
+                        </a>
+                    </div>
+
+                    <div id="nrEmptyState" style="display: none; text-align: center; padding: 40px 20px; color: var(--text-soft);">
+                        <p style="font-size: 16px; font-weight: 600;">Nenhuma Norma Regulamentadora encontrada para a busca realizada.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= CTA BANNER ================= -->
+            <section class="seg-cta-banner">
+                <div class="container seg-cta-banner-inner">
+                    <span class="eyebrow" style="color: var(--green-light); margin-bottom: 8px; display: inline-block;">Conformidade Trabalhista</span>
+                    <h2>Precisa de Adequação às NRs na sua Empresa?</h2>
+                    <p>A Brasmed elabora todos os laudos, programas ocupacionais e treinamentos práticos para manter seu negócio 100% regularizado perante o Ministério do Trabalho.</p>
+                    <div class="seg-cta-buttons">
+                        <a href="https://wa.me/551149635529" target="_blank" rel="noopener" class="btn btn-primary">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 6px;"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.7 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.2-3.5-.8-3-1.2-4.9-4.2-5.1-4.4-.1-.2-1.2-1.6-1.2-3s.8-2.2 1-2.5c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.2-.3.3-.1.6.2.3.9 1.5 1.9 2.4 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.6-.1l.7-.8c.2-.3.4-.2.7-.1l1.7.8c.2.1.4.2.5.3.1.2.1 1-.1 1.7z"/></svg>
+                            Falar no WhatsApp
+                        </a>
+                        <a href="/contato/" class="btn btn-secondary" style="background: rgba(255,255,255,0.12); color: #fff; border-color: rgba(255,255,255,0.3);">
+                            Fale Conosco
+                        </a>
+                    </div>
+                </div>
+            </section>
         </main>
 
-        <footer id="footer-container"></footer>
+        <!-- ================= FOOTER ================= -->
+        <footer>
+          <div class="footer-top">
+            <div class="footer-brand">
+              <div class="logo">
+                <img src="/assets/images/Logo.png" class="logo-img" alt="Brasmed">
+              </div>
+              <p>Medicina e segurança ocupacional desde 2001, atuando em todo o Brasil com estrutura própria e rede credenciada.</p>
+              <a href="https://wa.me/551149635529" class="whatsapp-btn" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.7 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.2-3.5-.8-3-1.2-4.9-4.2-5.1-4.4-.1-.2-1.2-1.6-1.2-3s.8-2.2 1-2.5c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.2-.3.3-.1.6.2.3.9 1.5 1.9 2.4 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.6-.1l.7-.8c.2-.3.4-.2.7-.1l1.7.8c.2.1.4.2.5.3.1.2.1 1-.1 1.7z"/></svg>
+                Chamar no WhatsApp
+              </a>
+            </div>
+
+            <div class="footer-col">
+              <h4>Links Rápidos</h4>
+              <ul>
+                <li><a href="/#sobre">Quem Somos</a></li>
+                <li><a href="https://drive.google.com/file/d/1UeKE1xHVaBGxzF2mYXe1Us-mmotlPUUt/view" target="_blank">Apresentação</a></li>
+                <li><a href="/rede-credenciada/">Rede Credenciada</a></li>
+                <li><a href="https://brasmed.prosesmt.com.br/login" target="_blank">Guia de Encaminhamento</a></li>
+                <li><a href="/contato/">Contato</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4>Contato</h4>
+              <ul>
+                <li><a href="tel:+551149635529">(11) 4963-5529</a></li>
+                <li><a href="https://wa.me/551149635529" target="_blank" rel="noopener">WhatsApp</a></li>
+                <li><span class="addr">Seg a Sex: 8h às 17h<br>Sáb, Dom e Feriado: fechado</span></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4>Endereço</h4>
+              <span class="addr">Rua Darcy Vargas, 319<br>Centro — Guarulhos - SP</span>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <p>© 2026 Brasmed Saúde Ocupacional - Todos os direitos reservados</p>
+            <div class="footer-bottom-links">
+              <a href="/politica-de-privacidade/">Política de Privacidade</a>
+            </div>
+          </div>
+        </footer>
     </div>
+
     <!-- JS -->
     <script src="/assets/js/main.js" type="module"></script>
 </body>

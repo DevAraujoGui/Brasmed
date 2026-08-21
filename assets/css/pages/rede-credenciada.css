@@ -1,155 +1,317 @@
-/* ---------- REDES CREDENCIADAS PAGE ---------- */
+/* ---------- REDE CREDENCIADA - MODERN DYNAMIC DASHBOARD ---------- */
+
+/* Page Hero */
 .network-hero {
   background: linear-gradient(135deg, var(--green-tint) 0%, var(--white) 100%);
-  padding: 60px 6vw;
+  padding: 100px 6vw 50px;
   border-bottom: 1px solid var(--grey-line);
   margin-top: 80px;
   text-align: center;
 }
+.network-hero-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
 .network-hero h1 {
-  font-size: clamp(26px, 3.5vw, 40px);
+  font-size: clamp(28px, 4vw, 42px);
   color: var(--navy-2);
   margin-bottom: 12px;
+  line-height: 1.2;
 }
 .network-hero p {
   color: var(--text-soft);
-  max-width: 600px;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* Quick Metrics Stats Bar */
+.network-stats-bar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.network-stat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--white);
+  border: 1.5px solid var(--grey-line);
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--navy-2);
+  box-shadow: var(--shadow-soft);
+}
+.network-stat-pill svg {
+  color: var(--green);
+}
+
+/* Map Interactive Showcase */
+.map-showcase-section {
+  padding: 50px 6vw 20px;
+  background: var(--white);
+}
+.map-showcase-card {
+  background: var(--white);
+  border: 1px solid var(--grey-line);
+  border-radius: var(--radius-m);
+  padding: 36px 30px;
+  max-width: 960px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-soft);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.map-info-side h2 {
+  font-size: clamp(22px, 2.5vw, 30px);
+  color: var(--navy-2);
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+.map-info-side p {
+  color: var(--text-soft);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.map-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--grey-bg);
+  padding: 16px;
+  border-radius: var(--radius-s);
+  border: 1px solid var(--grey-line);
+}
+.map-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--navy-2);
+  font-weight: 600;
+}
+.map-legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--green);
+}
+
+.map-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.map-photo-img {
+  width: 100%;
+  height: auto;
+  max-height: 440px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.07));
+  border-radius: var(--radius-m);
+  transition: transform 0.3s var(--ease);
+}
+.map-photo-img:hover {
+  transform: scale(1.02);
+}
+
+/* ---------- DYNAMIC DASHBOARD EXPLORER ---------- */
+.dashboard-section {
+  padding: 40px 6vw 80px;
+  background: var(--grey-bg);
+  border-top: 1px solid var(--grey-line);
+}
+.dashboard-container {
+  max-width: 1100px;
   margin: 0 auto;
 }
 
-/* Dashboard Layout */
-.dashboard-container {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 40px;
-  padding: 40px 6vw 80px;
-}
-
-/* Sidebar Search & Selectors */
-.sidebar-sticky {
-  position: sticky;
-  top: 100px;
-  height: fit-content;
+/* Explorer Control Bar (Search + Region Tabs) */
+.explorer-controls {
+  background: var(--white);
+  border: 1px solid var(--grey-line);
+  border-radius: var(--radius-m);
+  padding: 24px;
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
-
-.search-box {
+.search-bar-wrap {
   position: relative;
-}
-.search-box input {
   width: 100%;
-  padding: 12px 14px 12px 40px;
-  border-radius: var(--radius-s);
+}
+.search-bar-wrap input {
+  width: 100%;
+  padding: 14px 20px 14px 48px;
+  border-radius: 50px;
   border: 1.5px solid var(--grey-line);
   font-family: inherit;
-  font-size: 14px;
+  font-size: 15px;
   color: var(--navy);
-  transition: all .2s var(--ease);
+  background: var(--grey-bg);
+  transition: all 0.25s var(--ease);
 }
-.search-box input:focus {
+.search-bar-wrap input:focus {
   border-color: var(--green);
+  background: var(--white);
   box-shadow: 0 0 0 4px rgba(0, 135, 90, 0.12);
   outline: none;
 }
-.search-box svg {
+.search-bar-wrap svg {
   position: absolute;
-  left: 14px;
+  left: 18px;
   top: 50%;
   transform: translateY(-50%);
   color: var(--text-soft);
   pointer-events: none;
 }
 
-.state-filters-box {
-  background: var(--grey-bg);
-  border: 1px solid var(--grey-line);
-  border-radius: var(--radius-m);
-  padding: 20px;
-}
-.state-filters-box h3 {
-  font-size: 14px;
-  color: var(--navy-2);
-  margin-bottom: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-weight: 700;
-}
-.state-pill-list {
+/* Region Tabs */
+.region-tabs-group {
   display: flex;
-  flex-wrap: wrap;
   gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
 }
-.state-pill {
-  padding: 6px 12px;
-  border-radius: var(--radius-s);
-  background: var(--white);
-  border: 1px solid var(--grey-line);
+.region-tabs-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-right: 6px;
+}
+.region-tab-btn {
+  padding: 8px 16px;
+  border-radius: 50px;
   font-size: 13px;
   font-weight: 600;
-  color: var(--text-soft);
-  transition: all .2s var(--ease);
+  color: var(--navy-2);
+  background: var(--grey-bg);
+  border: 1px solid var(--grey-line);
   cursor: pointer;
+  transition: all 0.2s var(--ease);
 }
-.state-pill:hover, .state-pill.active {
+.region-tab-btn:hover, .region-tab-btn.active {
   background: var(--green);
   color: var(--white);
   border-color: var(--green);
 }
 
-/* Results Content */
-.results-section {
+/* State Filter Pills */
+.state-pills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-top: 14px;
+  border-top: 1px solid var(--grey-line);
+}
+.state-pill {
+  padding: 5px 12px;
+  border-radius: var(--radius-s);
+  background: var(--white);
+  border: 1px solid var(--grey-line);
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--text-soft);
+  transition: all 0.2s var(--ease);
+  cursor: pointer;
+}
+.state-pill:hover, .state-pill.active {
+  background: var(--navy-2);
+  color: var(--white);
+  border-color: var(--navy-2);
+}
+
+/* Results Cards Grid */
+.results-grid {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 20px;
 }
 
 .state-group-card {
   background: var(--white);
   border: 1px solid var(--grey-line);
   border-radius: var(--radius-m);
-  padding: 24px;
+  padding: 26px;
   box-shadow: var(--shadow-soft);
-  transition: border-color .25s var(--ease);
+  transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
 }
 .state-group-card:hover {
   border-color: var(--green-light);
+  box-shadow: var(--shadow-hover);
 }
+
 .state-group-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1.5px solid var(--green-tint);
-  padding-bottom: 12px;
+  border-bottom: 1.5px solid var(--grey-line);
+  padding-bottom: 14px;
   margin-bottom: 18px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
-.state-group-header h2 {
-  font-size: 20px;
-  color: var(--navy-2);
+.state-title-wrap {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 .state-badge {
-  font-size: 12px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
   background: var(--green-tint);
   color: var(--green-dark);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 800;
+  border: 1px solid rgba(0, 135, 90, 0.2);
+}
+.state-title-wrap h3 {
+  font-size: 19px;
+  color: var(--navy-2);
+  margin: 0;
+}
+.region-badge {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  background: var(--grey-bg);
   padding: 3px 8px;
   border-radius: 4px;
-  font-weight: 700;
+  border: 1px solid var(--grey-line);
 }
 .city-count {
-  font-size: 13px;
-  color: var(--text-soft);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--green-dark);
 }
 
-.city-grid {
+/* City Chips Grid */
+.city-chips-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 10px;
 }
-.city-item {
+.city-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   padding: 10px 14px;
   background: var(--grey-bg);
   border: 1px solid var(--grey-line);
@@ -157,128 +319,201 @@
   font-size: 13.5px;
   color: var(--navy);
   font-weight: 500;
-  transition: all .2s var(--ease);
+  transition: all 0.2s var(--ease);
 }
-.city-item:hover {
+.city-chip svg {
+  color: var(--green);
+  flex-shrink: 0;
+}
+.city-chip:hover {
   background: var(--white);
   border-color: var(--green);
-  color: var(--green);
-  box-shadow: var(--shadow-soft);
+  color: var(--green-dark);
+  box-shadow: 0 2px 8px rgba(0, 135, 90, 0.1);
+  transform: translateY(-2px);
 }
 
-/* No results state */
+/* State Card Footer / Expand Button */
+.state-card-footer {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--grey-line);
+  text-align: center;
+}
+.btn-toggle-cities {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: var(--green);
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: var(--radius-s);
+  transition: background 0.2s var(--ease), color 0.2s var(--ease);
+}
+.btn-toggle-cities:hover {
+  background: var(--green-tint);
+  color: var(--green-dark);
+}
+
+/* No Results State */
 .no-results {
   text-align: center;
   padding: 60px 20px;
-  color: var(--text-soft);
+  background: var(--white);
+  border-radius: var(--radius-m);
+  border: 1px solid var(--grey-line);
 }
 .no-results svg {
-  margin-bottom: 16px;
-  color: var(--grey-line);
+  color: var(--text-soft);
+  margin-bottom: 12px;
+}
+.no-results h3 {
+  font-size: 18px;
+  color: var(--navy-2);
+  margin-bottom: 6px;
+}
+.no-results p {
+  color: var(--text-soft);
+  font-size: 14px;
 }
 
-/* Map Visual Overview */
-.map-wrapper {
-  background: var(--white);
-  border: 1px solid var(--grey-line);
-  border-radius: var(--radius-m);
-  padding: 30px;
-  max-width: 900px;
-  margin: 30px auto 0;
-  box-shadow: var(--shadow-soft);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-}
-.map-container {
-  position: relative;
-  width: 100%;
-  max-width: 550px;
-  aspect-ratio: 1;
-}
-.map-svg {
-  width: 100%;
-  height: 100%;
-}
-.map-bg-path {
-  fill: var(--green-tint);
-  stroke: var(--grey-line);
-  stroke-width: 1.5;
-  stroke-dasharray: 4 2;
-}
-
-/* Pins & Dots */
-.map-pin {
-  cursor: pointer;
-  transition: transform 0.2s var(--ease);
-}
-.map-pin:hover {
-  transform: scale(1.25);
-}
-.map-pin:hover .pin-core {
-  fill: var(--green-dark);
-}
-.map-pin.active .pin-core {
-  fill: var(--green-dark);
-  stroke: var(--white);
-  stroke-width: 2px;
-}
-.pin-core {
-  fill: var(--green);
-  transition: fill 0.2s var(--ease);
-}
-.pin-pulse {
-  fill: var(--green-light);
-  opacity: 0.4;
-  animation: pulse-pin 2s infinite ease-out;
-  transform-origin: center;
-}
-
-/* Tooltip on Map */
-.map-tooltip {
-  position: absolute;
-  background: var(--navy-2);
-  color: var(--white);
-  padding: 8px 12px;
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: 600;
-  pointer-events: none;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.2s var(--ease);
-  box-shadow: var(--shadow-hover);
-  transform: translate(-50%, -100%) translateY(-8px);
-  z-index: 100;
-  white-space: nowrap;
-}
-.map-tooltip.visible {
-  opacity: 1;
-  visibility: visible;
-}
-
-@keyframes pulse-pin {
-  0% {
-    transform: scale(1);
-    opacity: 0.4;
-  }
-  100% {
-    transform: scale(2.8);
-    opacity: 0;
-  }
-}
-
-/* RESPONSIVE */
+/* Responsive Media Queries */
 @media (max-width: 980px) {
-  .dashboard-container {
+  .map-showcase-card {
     grid-template-columns: 1fr;
     gap: 30px;
-    padding-top: 30px;
+    padding: 28px 24px;
+    text-align: center;
   }
-  .sidebar-sticky {
-    position: static;
-    height: auto;
+  .map-info-side {
+    text-align: center;
+  }
+  .map-legend {
+    text-align: left;
+  }
+  .map-container {
+    max-width: 320px;
+    margin: 0 auto;
   }
 }
+
+@media (max-width: 640px) {
+  .network-hero {
+    padding: 70px 5vw 36px;
+    margin-top: 68px;
+  }
+  .network-hero h1 {
+    font-size: 26px;
+    line-height: 1.25;
+  }
+  .network-hero p {
+    font-size: 14.5px;
+    line-height: 1.55;
+    margin-bottom: 20px;
+  }
+  .network-stats-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .network-stat-pill {
+    width: 100%;
+    justify-content: center;
+    padding: 9px 14px;
+    font-size: 13px;
+  }
+
+  .map-showcase-section, .dashboard-section {
+    padding: 24px 4vw 50px;
+  }
+  .map-showcase-card {
+    padding: 20px 16px;
+    border-radius: var(--radius-m);
+  }
+  .map-container {
+    max-width: 260px;
+  }
+
+  /* Controls on mobile */
+  .explorer-controls {
+    padding: 18px 14px;
+    border-radius: var(--radius-m);
+    gap: 16px;
+  }
+  .search-bar-wrap input {
+    padding: 12px 16px 12px 42px;
+    font-size: 14px;
+  }
+  .search-bar-wrap svg {
+    left: 14px;
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Horizontal swipeable region tabs for mobile */
+  .region-tabs-group {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+    gap: 8px;
+    scrollbar-width: none;
+  }
+  .region-tabs-group::-webkit-scrollbar {
+    display: none;
+  }
+  .region-tabs-label {
+    display: none;
+  }
+  .region-tab-btn {
+    flex-shrink: 0;
+    padding: 7px 14px;
+    font-size: 12.5px;
+  }
+
+  /* State pills on mobile */
+  .state-pills-row {
+    gap: 6px;
+    padding-top: 12px;
+  }
+  .state-pill {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  /* Results and City Chips on mobile */
+  .state-group-card {
+    padding: 18px 14px;
+    border-radius: var(--radius-m);
+  }
+  .state-group-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding-bottom: 12px;
+    margin-bottom: 14px;
+  }
+  .state-title-wrap h3 {
+    font-size: 17px;
+  }
+  .city-chips-container {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .city-chip {
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+  .btn-toggle-cities {
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+    font-size: 13px;
+    background: var(--grey-bg);
+  }
+}
+

@@ -38,6 +38,14 @@ export function initNavbar() {
       navLinks.classList.toggle('open');
     });
 
+    // Ensure mobile CTA button exists inside navLinks
+    if (!navLinks.querySelector('.nav-mobile-cta')) {
+      const ctaBtn = document.createElement('div');
+      ctaBtn.className = 'nav-mobile-cta';
+      ctaBtn.innerHTML = '<a href="https://brasmed.prosesmt.com.br/login" target="_blank" class="btn btn-primary">Guia de Encaminhamento</a>';
+      navLinks.appendChild(ctaBtn);
+    }
+
     // Close menu when clicking on a direct link
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {

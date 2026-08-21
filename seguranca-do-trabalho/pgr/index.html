@@ -1,26 +1,243 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brasmed - Medicina e SeguranÃ§a do Trabalho</title>
-    <meta name="description" content="Brasmed - SoluÃ§Ãµes em Medicina Ocupacional e SeguranÃ§a do Trabalho.">
+    <title>PGR - Programa de Gerenciamento de Riscos | Brasmed</title>
+    <meta name="description" content="Saiba tudo sobre o PGR (Programa de Gerenciamento de Riscos) e GRO conforme a NR-1 e NR-9 com a Brasmed.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/components.css">
     <link rel="stylesheet" href="/assets/css/utilities.css">
+    <link rel="stylesheet" href="/assets/css/pages/seguranca.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/images/logo.png">
 </head>
 <body>
     <div id="app">
-        <!-- Header / Navbar dynamically loaded or included -->
-        <header id="header-container"></header>
+        <!-- ================= NAVBAR ================= -->
+        <header class="navbar" id="navbar">
+          <!-- Logo — pinned to the far left -->
+          <a href="/" class="logo">
+            <img src="/assets/images/Logo.png" class="logo-img" alt="Brasmed">
+          </a>
+
+          <!-- Right-side: nav links + CTA -->
+          <div class="nav-right">
+            <nav class="nav-links" id="navLinks">
+              <div class="nav-item"><a href="/#sobre" class="nav-link">Quem Somos</a></div>
+              <div class="nav-item"><a href="https://drive.google.com/file/d/1UeKE1xHVaBGxzF2mYXe1Us-mmotlPUUt/view" target="_blank" class="nav-link">Apresentação</a></div>
+              <div class="nav-item"><a href="/rede-credenciada/" class="nav-link">Redes Credenciadas</a></div>
+
+              <div class="nav-item">
+                <button class="nav-link active" type="button" aria-haspopup="true" aria-expanded="false">
+                  Serviços <span class="chevron"></span>
+                </button>
+                <div class="dropdown">
+                  <div class="dropdown-group">
+                    <div class="dropdown-group-title">Saúde Ocupacional</div>
+                    <a href="/saude-ocupacional/pcmso/">PCMSO</a>
+                    <a href="/saude-ocupacional/exames/">Exames Ocupacionais</a>
+                  </div>
+                  <div class="dropdown-divider"></div>
+                  <div class="dropdown-group">
+                    <div class="dropdown-group-title">Segurança do Trabalho</div>
+                    <a href="/seguranca-do-trabalho/ppp/">PPP</a>
+                    <a href="/seguranca-do-trabalho/pgr/" class="nav-highlight">PGR</a>
+                    <a href="/seguranca-do-trabalho/ltcat/">LTCAT</a>
+                    <a href="/seguranca-do-trabalho/nrs/">Normas Regulamentadoras (NRs)</a>
+                    <a href="/seguranca-do-trabalho/treinamentos/">Treinamentos</a>
+                  </div>
+                  <div class="dropdown-divider"></div>
+                  <div class="dropdown-group">
+                    <div class="dropdown-group-title">Outros</div>
+                    <a href="/psicossocial/">Atenção Psicossocial</a>
+                    <a href="/gestao-afastados/">Gestão de Afastados</a>
+                    <a href="/e-social/">e-Social</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="nav-item"><a href="/#contato" class="nav-link nav-highlight">Contato</a></div>
+            </nav>
+
+            <div class="nav-cta-group">
+              <a href="https://brasmed.prosesmt.com.br/login" target="_blank" class="btn btn-primary" style="padding:11px 22px;font-size:14px;">Guia de Encaminhamento</a>
+              <button class="nav-burger" id="burger" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <div id="top"></div>
+
+        <!-- ================= HERO ================= -->
+        <section class="seg-hero">
+            <div class="container hero-inner">
+                <span class="eyebrow">Segurança do Trabalho</span>
+                <h1>PGR</h1>
+                <p class="subtitle">Programa de Gerenciamento de Riscos (NR-1 e NR-9)</p>
+            </div>
+        </section>
 
         <main>
-            <h1>PGR - Brasmed</h1>
+            <!-- ================= INTRO ================= -->
+            <section class="section-seg">
+                <div class="container seg-intro-grid">
+                    <div class="seg-title-block">
+                        <span class="eyebrow">Gerenciamento Ocupacional</span>
+                        <h2>O que é o PGR?</h2>
+                        <p>O <strong>PGR (Programa de Gerenciamento de Riscos)</strong> é um conjunto de procedimentos, técnicas de gestão, métodos de avaliação, registros e controles de monitoramento e avaliação de riscos que devem ser seguidos e adotados pela empresa com o objetivo primordial de <strong>prevenção de acidentes e doenças de trabalho</strong>.</p>
+                        <p>Ele contempla o mapeamento de todos os <strong>riscos ocupacionais</strong> (físicos, químicos, biológicos, ergonômicos e mecânicos/acidentes) e estabelece as medidas preventivas adequadas.</p>
+                    </div>
+
+                    <div class="seg-highlight-box">
+                        <h3 style="font-size: 18px; color: var(--green-dark); margin-bottom: 5px;">Pilares do PGR Brasmed</h3>
+                        
+                        <div class="seg-feature-item">
+                            <div class="seg-feature-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                            </div>
+                            <div class="seg-feature-content">
+                                <h4>Inventário de Riscos</h4>
+                                <p>Identificação minuciosa dos perigos, fontes geradoras, colaboradores expostos e gradação de severidade e probabilidade.</p>
+                            </div>
+                        </div>
+
+                        <div class="seg-feature-item">
+                            <div class="seg-feature-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                            </div>
+                            <div class="seg-feature-content">
+                                <h4>Plano de Ação Dinâmico</h4>
+                                <p>Cronograma com medidas de controle, prazos, responsáveis e formas de acompanhamento em tempo real.</p>
+                            </div>
+                        </div>
+
+                        <div class="seg-feature-item">
+                            <div class="seg-feature-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                            </div>
+                            <div class="seg-feature-content">
+                                <h4>Melhoria Contínua (GRO)</h4>
+                                <p>Processo contínuo de gestão que tira o controle do papel e monitora a eficácia real das proteções adotadas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= TRANSIÇÃO PPRA PARA PGR ================= -->
+            <section class="section-seg-alt">
+                <div class="container">
+                    <div style="text-align: center; max-width: 750px; margin: 0 auto 30px;">
+                        <span class="eyebrow">Evolução Normativa</span>
+                        <h2>Por que o antigo PPRA mudou para PGR?</h2>
+                        <p style="color: var(--text-soft); font-size: 15.5px;">Com a modernização das Normas Regulamentadoras, o PPRA foi substituído pelo PGR para abranger uma visão global de riscos operacionais e ergonômicos.</p>
+                    </div>
+
+                    <div class="seg-cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+                        <div class="seg-card">
+                            <div class="seg-card-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                            </div>
+                            <h3>Portaria nº 6.730/2020 - NR-1</h3>
+                            <p>Trata das <strong>Disposições Gerais e Gerenciamento de Riscos Ocupacionais (GRO)</strong>. Estabelece a obrigatoriedade da implantação do PGR para todas as empresas que admitam trabalhadores regidos pela CLT, estruturando o Inventário de Riscos e o Plano de Ação.</p>
+                        </div>
+
+                        <div class="seg-card">
+                            <div class="seg-card-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+                            </div>
+                            <h3>Portaria nº 6.735/2020 - NR-9</h3>
+                            <p>Trata da <strong>Avaliação e Controle das Exposições Ocupacionais a Agentes Físicos, Químicos e Biológicos</strong>. Serve para que a empresa realize medições quantitativas e qualitativas precisas, complementando o inventário da NR-1.</p>
+                        </div>
+                    </div>
+
+                    <div style="background: var(--white); border: 1px solid var(--grey-line); border-radius: var(--radius-m); padding: 25px; margin-top: 30px; text-align: center; box-shadow: var(--shadow-soft);">
+                        <p style="color: var(--navy-2); font-size: 15.5px; line-height: 1.7; margin: 0;">
+                            <strong>Em suma:</strong> A NR-1 estabelece os critérios gerais de gestão e governança de saúde e segurança, enquanto a NR-9 define os métodos de avaliação ambiental dos agentes nocivos. <strong>Uma complementa a outra com o objetivo de tirar o controle de riscos do papel e realizá-lo em tempo real.</strong>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= CTA BANNER ================= -->
+            <section class="seg-cta-banner">
+                <div class="container seg-cta-banner-inner">
+                    <span class="eyebrow" style="color: var(--green-light); margin-bottom: 8px; display: inline-block;">Gestão e Prevenção</span>
+                    <h2>Precisa Estruturar o PGR e o GRO na sua Empresa?</h2>
+                    <p>Fale com a equipe de engenharia de segurança da Brasmed para inventariar os riscos operacionais e implementar seu plano de ação em conformidade com as NRs.</p>
+                    <div class="seg-cta-buttons">
+                        <a href="https://wa.me/551149635529" target="_blank" rel="noopener" class="btn btn-primary">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 6px;"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.7 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.2-3.5-.8-3-1.2-4.9-4.2-5.1-4.4-.1-.2-1.2-1.6-1.2-3s.8-2.2 1-2.5c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.2-.3.3-.1.6.2.3.9 1.5 1.9 2.4 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.6-.1l.7-.8c.2-.3.4-.2.7-.1l1.7.8c.2.1.4.2.5.3.1.2.1 1-.1 1.7z"/></svg>
+                            Falar no WhatsApp
+                        </a>
+                        <a href="/contato/" class="btn btn-secondary" style="background: rgba(255,255,255,0.12); color: #fff; border-color: rgba(255,255,255,0.3);">
+                            Entrar em Contato
+                        </a>
+                    </div>
+                </div>
+            </section>
         </main>
 
-        <footer id="footer-container"></footer>
+        <!-- ================= FOOTER ================= -->
+        <footer>
+          <div class="footer-top">
+            <div class="footer-brand">
+              <div class="logo">
+                <img src="/assets/images/Logo.png" class="logo-img" alt="Brasmed">
+              </div>
+              <p>Medicina e segurança ocupacional desde 2001, atuando em todo o Brasil com estrutura própria e rede credenciada.</p>
+              <a href="https://wa.me/551149635529" class="whatsapp-btn" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.7 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.2-3.5-.8-3-1.2-4.9-4.2-5.1-4.4-.1-.2-1.2-1.6-1.2-3s.8-2.2 1-2.5c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.2-.3.3-.1.6.2.3.9 1.5 1.9 2.4 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.6-.1l.7-.8c.2-.3.4-.2.7-.1l1.7.8c.2.1.4.2.5.3.1.2.1 1-.1 1.7z"/></svg>
+                Chamar no WhatsApp
+              </a>
+            </div>
+
+            <div class="footer-col">
+              <h4>Links Rápidos</h4>
+              <ul>
+                <li><a href="/#sobre">Quem Somos</a></li>
+                <li><a href="https://drive.google.com/file/d/1UeKE1xHVaBGxzF2mYXe1Us-mmotlPUUt/view" target="_blank">Apresentação</a></li>
+                <li><a href="/rede-credenciada/">Rede Credenciada</a></li>
+                <li><a href="https://brasmed.prosesmt.com.br/login" target="_blank">Guia de Encaminhamento</a></li>
+                <li><a href="/contato/">Contato</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4>Contato</h4>
+              <ul>
+                <li><a href="tel:+551149635529">(11) 4963-5529</a></li>
+                <li><a href="https://wa.me/551149635529" target="_blank" rel="noopener">WhatsApp</a></li>
+                <li><span class="addr">Seg a Sex: 8h às 17h<br>Sáb, Dom e Feriado: fechado</span></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4>Endereço</h4>
+              <span class="addr">Rua Darcy Vargas, 319<br>Centro — Guarulhos - SP</span>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <p>© 2026 Brasmed Saúde Ocupacional - Todos os direitos reservados</p>
+            <div class="footer-bottom-links">
+              <a href="/politica-de-privacidade/">Política de Privacidade</a>
+            </div>
+          </div>
+        </footer>
     </div>
+
     <!-- JS -->
     <script src="/assets/js/main.js" type="module"></script>
 </body>
