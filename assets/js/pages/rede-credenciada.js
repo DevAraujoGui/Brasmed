@@ -164,7 +164,7 @@ export function initRede() {
             <h3>${item.state}</h3>
             <span class="region-badge">${item.region}</span>
           </div>
-          <span class="city-count">${matchingCities.length} ${matchingCities.length === 1 ? 'cidade atendida' : 'cidades atendidas'}</span>
+          <span class="city-count">${matchingCities.length} ${matchingCities.length === 1 ? 'região atendida' : 'regiões atendidas'}</span>
         </div>
 
         <div class="city-chips-container" id="cityContainer-${index}">
@@ -179,7 +179,7 @@ export function initRede() {
         ${hasMoreCities ? `
           <div class="state-card-footer">
             <button type="button" class="btn-toggle-cities" data-expanded="false" data-target="cityContainer-${index}" data-state-index="${index}">
-              <span>Ver todas as ${item.cities.length} cidades (+${item.cities.length - maxInitialCities})</span>
+              <span>Ver todas as ${item.cities.length} regiões (+${item.cities.length - maxInitialCities})</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
           </div>
@@ -209,7 +209,7 @@ export function initRede() {
             </div>
           `).join('');
           btn.setAttribute("data-expanded", "false");
-          btn.innerHTML = `<span>Ver todas as ${stateData.cities.length} cidades (+${stateData.cities.length - currentLimit})</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>`;
+          btn.innerHTML = `<span>Ver todas as ${stateData.cities.length} regiões (+${stateData.cities.length - currentLimit})</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>`;
         } else {
           // Expand all
           container.innerHTML = stateData.cities.map(city => `

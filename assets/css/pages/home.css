@@ -106,6 +106,10 @@
   transition:transform .2s var(--ease), box-shadow .2s var(--ease);
   display:flex;flex-direction:column;
 }
+.service-card-link{
+  display:flex;flex-direction:column;flex:1;
+  text-decoration:none;color:inherit;
+}
 .service-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover);border-color:var(--green);}
 .service-thumb{
   height:130px;position:relative;overflow:hidden;

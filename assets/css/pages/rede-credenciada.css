@@ -80,29 +80,6 @@
   line-height: 1.6;
   margin-bottom: 20px;
 }
-.map-legend {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  background: var(--grey-bg);
-  padding: 16px;
-  border-radius: var(--radius-s);
-  border: 1px solid var(--grey-line);
-}
-.map-legend-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 13px;
-  color: var(--navy-2);
-  font-weight: 600;
-}
-.map-legend-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--green);
-}
 
 .map-image-wrapper {
   position: relative;
@@ -391,9 +368,6 @@
   }
   .map-info-side {
     text-align: center;
-  }
-  .map-legend {
-    text-align: left;
   }
   .map-container {
     max-width: 320px;
