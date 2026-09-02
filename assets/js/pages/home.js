@@ -1,4 +1,4 @@
-// Home page script
+import { submitContactForm } from '../api.js';
 
 export function initHome() {
   // ---- Hero carousel ----
@@ -49,20 +49,12 @@ export function initHome() {
     });
   }
 
-  // ---- Form submit (demo) ----
+  // ---- Form submit ----
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const btn = e.target.querySelector('button[type="submit"]');
-      const original = btn.textContent;
-      btn.textContent = 'Mensagem enviada!';
-      btn.style.background = 'var(--green-light)';
-      setTimeout(() => {
-        btn.textContent = original;
-        btn.style.background = '';
-        e.target.reset();
-      }, 2400);
+      submitContactForm(contactForm, { origem: 'Página Inicial (Home)' });
     });
   }
 }

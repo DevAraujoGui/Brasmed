@@ -173,13 +173,13 @@
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
 .field{margin-bottom:18px;}
 .field label{display:block;font-size:13px;font-weight:600;margin-bottom:7px;color:var(--navy-2);}
-.field input, .field textarea{
+.field input, .field select, .field textarea{
   width:100%;padding:12px 14px;border-radius:var(--radius-s);
   border:1.5px solid var(--grey-line);background:var(--white);
   font-family:inherit;font-size:14.5px;color:var(--navy);
   transition:border-color .25s var(--ease), box-shadow .25s var(--ease);
 }
-.field input:focus, .field textarea:focus{
+.field input:focus, .field select:focus, .field textarea:focus{
   border-color:var(--green);box-shadow:0 0 0 4px rgba(0,135,90,.12);outline:none;
 }
 .field textarea{resize:vertical;min-height:110px;}

@@ -315,7 +315,14 @@
 
                         <div class="form-field">
                             <label for="assunto">Assunto <span>*</span></label>
-                            <input type="text" id="assunto" name="assunto" placeholder="Ex: Cotação de PCMSO para Guarulhos" required>
+                            <select id="assunto" name="assunto" required>
+                                <option value="" disabled selected>Selecione o assunto...</option>
+                                <option value="Saúde Ocupacional" selected>Saúde Ocupacional</option>
+                                <option value="Segurança do Trabalho">Segurança do Trabalho</option>
+                                <option value="Guia de Encaminhamento">Guia de Encaminhamento</option>
+                                <option value="Exames Complementares">Exames Complementares</option>
+                                <option value="Outros">Outros</option>
+                            </select>
                         </div>
 
                         <div class="form-field full">

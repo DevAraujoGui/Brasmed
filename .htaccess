@@ -1,0 +1,42 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # =========================================================================
+    # 1. FORÇAR CONEXÃO SEGURA HTTPS (SSL/TLS)
+    # =========================================================================
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+<IfModule mod_headers.c>
+    # HSTS (Strict-Transport-Security): Força HTTPS no navegador por 1 ano incluindo subdomínios
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+    # Previne ataques de Clickjacking (impede o site de ser embutido em iframes externos)
+    Header always set X-Frame-Options "SAMEORIGIN"
+
+    # Previne MIME-type sniffing (impede interpretação de arquivos como outro formato)
+    Header always set X-Content-Type-Options "nosniff"
+
+    # Proteção de Referrer: envia apenas a origem em transições para terceiros
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Permissões do Navegador (bloqueia acesso indevido a microfone, câmera e geolocalização)
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+
+    # Isolamento e Políticas de Cross-Origin (COOP, COEP, CORP)
+    Header always set Cross-Origin-Opener-Policy "same-origin-allow-popups"
+    Header always set Cross-Origin-Embedder-Policy "unsafe-none"
+    Header always set Cross-Origin-Resource-Policy "same-origin"
+
+    # Content Security Policy (CSP): Permite scripts e recursos confiáveis, bloqueia clickjacking com frame-ancestors
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; frame-src 'self' https://www.google.com https://www.canva.com https://brasmed.prosesmt.com.br https://drive.google.com; frame-ancestors 'self'; connect-src 'self' https://mail.google.com https://outlook.live.com https://compose.mail.yahoo.com; object-src 'none'; base-uri 'self';"
+</IfModule>
+
+Options -Indexes
+
+<FilesMatch "(^\.git|^\.env|composer\.json|package\.json|package-lock\.json|\.md$)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
