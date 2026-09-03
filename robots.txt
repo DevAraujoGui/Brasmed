@@ -5,5 +5,5 @@ Disallow: /.git/
 Disallow: /assets/css/
 Disallow: /assets/js/
 
-# Sitemap
-# Sitemap: https://brasmedsaudeocupacional.com.br/sitemap.xml
+# Sitemap Oficial para Googlebot e Bingbot
+Sitemap: https://brasmedsaudeocupacional.com.br/sitemap.xml
