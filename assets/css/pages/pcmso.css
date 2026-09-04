@@ -1,6 +1,3 @@
-/* ---------- PCMSO PAGE ---------- */
-
-/* Page Hero */
 .pcmso-hero {
   background: linear-gradient(135deg, var(--green-tint) 0%, var(--white) 100%);
   padding: 100px 6vw 60px;
@@ -24,21 +21,16 @@
   font-weight: 600;
   margin-bottom: 24px;
 }
-
-/* Sections Base */
 .section-pcmso {
   padding: 60px 6vw;
   background: var(--white);
 }
-
 .section-pcmso-alt {
   padding: 60px 6vw;
   background: var(--grey-bg);
   border-top: 1px solid var(--grey-line);
   border-bottom: 1px solid var(--grey-line);
 }
-
-/* Objectives & Guidelines */
 .pcmso-intro-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
@@ -56,7 +48,6 @@
   font-size: 16px;
   line-height: 1.7;
 }
-
 .guidelines-box {
   background: var(--green-tint);
   border-left: 4px solid var(--green);
@@ -93,8 +84,6 @@
   color: var(--text-soft);
   line-height: 1.5;
 }
-
-/* Responsibilities (Employer vs Doctor) */
 .roles-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -157,8 +146,6 @@
   flex-shrink: 0;
   margin-top: 4px;
 }
-
-/* Exam Frequency (Periodicidade) */
 .exams-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -205,8 +192,6 @@
   color: var(--text-soft);
   line-height: 1.5;
 }
-
-/* Legal Cards (ASO, Prontuario, Relatório) */
 .legal-flex-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -237,8 +222,6 @@
   color: var(--text-soft);
   line-height: 1.6;
 }
-
-/* Quote Form Section */
 .quote-wrapper {
   max-width: 650px;
   margin: 40px auto 0;
@@ -310,8 +293,6 @@
   justify-content: center;
   margin-top: 10px;
 }
-
-/* RESPONSIVE DESIGN */
 @media (max-width: 1024px) {
   .exams-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -320,7 +301,6 @@
     grid-template-columns: 1fr 1fr;
   }
 }
-
 @media (max-width: 980px) {
   .pcmso-intro-grid {
     grid-template-columns: 1fr;
@@ -330,7 +310,6 @@
     grid-template-columns: 1fr;
   }
 }
-
 @media (max-width: 768px) {
   .exams-grid {
     grid-template-columns: 1fr 1fr;
@@ -343,7 +322,6 @@
     gap: 0;
   }
 }
-
 @media (max-width: 480px) {
   .exams-grid {
     grid-template-columns: 1fr;

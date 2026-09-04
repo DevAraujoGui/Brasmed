@@ -1,4 +1,3 @@
-// Redes Credenciadas page logic - Modern Dynamic Explorer
 const networkData = [
   { state: "Acre", uf: "AC", region: "Norte", cities: ["Rio Branco"] },
   { state: "Amapá", uf: "AP", region: "Norte", cities: ["Macapá"] },
@@ -28,7 +27,6 @@ const networkData = [
   { state: "São Paulo (Interior/Litoral)", uf: "SP", region: "Sudeste", cities: ["Americana", "Amparo", "Andradina", "Araçatuba", "Arujá", "Araras", "Araraquara", "Assis", "Atibaia", "Barretos", "Barueri", "Bastos", "Batatais", "Boituva", "Bauru", "Bragança Paulista", "Cajamar", "Cajati", "Campinas", "Carapicuíba", "Caraguatatuba", "Catanduva", "Cotia", "Embu das Artes", "Franco da Rocha", "Guaratinguetá", "Guarujá", "Guarulhos", "Hortolândia", "Indaiatuba", "Itapetininga", "Itapevi", "Itapeva", "Itaquaquecetuba", "Itatiba", "Itu", "Jaboticabal", "Jacareí", "Jaguariúna", "Jales", "Jandira", "Jundiaí", "Lençóis Paulista", "Limeira", "Lorena", "Marília", "Matão", "Mauá", "Mogi das Cruzes", "Mogi Mirim", "Mogi-Guaçu", "Olímpia", "Osasco", "Pariquera-Açu", "Paulínia", "Pindamonhangaba", "Piracicaba", "Pedreira", "Presidente Prudente", "Registro", "Rio Claro", "Ribeirão Pires", "Ribeirão Preto", "Salto", "Santa Bárbara D'Oeste", "Santa Cruz", "Santana", "Santana do Parnaíba", "Santo Amaro", "Santo André", "Santo Antônio de Posse", "Santos", "São Bernardo do Campo", "São Carlos", "São Jose do Rio Preto", "São José dos Campos", "São Paulo", "São Pedro", "São Roque", "São Sebastião", "Socorro", "Sorocaba", "Sumaré", "Suzano", "Taboão da Serra", "Tatuí", "Taubaté", "Tupã", "Vinhedo", "Votuporanga"] },
   { state: "Tocantins", uf: "TO", region: "Norte", cities: ["Araguaína", "Porto Nacional"] }
 ];
-
 export function initRede() {
   const searchInput = document.getElementById("searchNetwork");
   const stateListContainer = document.getElementById("statePillList");
@@ -36,23 +34,16 @@ export function initRede() {
   const regionTabs = document.querySelectorAll(".region-tab-btn");
   const totalCitiesBadge = document.getElementById("totalCitiesCount");
   const totalStatesBadge = document.getElementById("totalStatesCount");
-
   if (!resultsContainer) return;
-
   let activeRegionFilter = "TODAS";
   let activeStateFilter = "TODOS";
   let searchWord = "";
-
-  // Calculate total counts
   const totalCities = networkData.reduce((acc, curr) => acc + curr.cities.length, 0);
   if (totalCitiesBadge) totalCitiesBadge.textContent = totalCities + "+ Cidades";
   if (totalStatesBadge) totalStatesBadge.textContent = "25+ Estados e DF";
-
   function normalizeStr(str) {
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
   }
-
-  // Render Region Tabs Interaction
   if (regionTabs.length) {
     regionTabs.forEach(tab => {
       tab.addEventListener("click", () => {
@@ -65,16 +56,12 @@ export function initRede() {
       });
     });
   }
-
-  // Render filter pills
   function renderPills() {
     if (!stateListContainer) return;
     stateListContainer.innerHTML = "";
-
     const filteredData = activeRegionFilter === "TODAS" 
       ? networkData 
       : networkData.filter(item => item.region === activeRegionFilter);
-
     const allPill = document.createElement("button");
     allPill.className = `state-pill ${activeStateFilter === "TODOS" ? "active" : ""}`;
     allPill.textContent = "Todos";
@@ -84,7 +71,6 @@ export function initRede() {
       renderPills();
     });
     stateListContainer.appendChild(allPill);
-
     filteredData.forEach(item => {
       const pill = document.createElement("button");
       pill.className = `state-pill ${activeStateFilter === item.uf ? "active" : ""}`;
@@ -98,22 +84,17 @@ export function initRede() {
       stateListContainer.appendChild(pill);
     });
   }
-
-  // Render cards based on criteria with Accordion Drawer Mode
   function renderResults() {
     resultsContainer.innerHTML = "";
     const normalizedQuery = normalizeStr(searchWord);
-
     const filtered = networkData.filter(item => {
       if (activeRegionFilter !== "TODAS" && item.region !== activeRegionFilter) return false;
       if (activeStateFilter !== "TODOS" && item.uf !== activeStateFilter) return false;
       if (!normalizedQuery) return true;
-
       const matchesState = normalizeStr(item.state).includes(normalizedQuery) || normalizeStr(item.uf).includes(normalizedQuery);
       const matchesCity = item.cities.some(city => normalizeStr(city).includes(normalizedQuery));
       return matchesState || matchesCity;
     });
-
     if (filtered.length === 0) {
       resultsContainer.innerHTML = `
         <div class="no-results">
@@ -140,23 +121,16 @@ export function initRede() {
       }
       return;
     }
-
-    // Determine limit dynamically based on viewport (3 for mobile <= 640px, 5 for desktop)
     const isMobile = window.innerWidth <= 640;
     const maxInitialCities = isMobile ? 3 : 5;
-
     filtered.forEach((item, index) => {
       const card = document.createElement("div");
       card.className = "state-group-card";
-
-      // Filter visible cities if query is active
       const matchingCities = normalizedQuery 
         ? item.cities.filter(c => normalizeStr(c).includes(normalizedQuery))
         : item.cities;
-
       const hasMoreCities = matchingCities.length > maxInitialCities && !normalizedQuery;
       const initialDisplayCount = hasMoreCities ? maxInitialCities : matchingCities.length;
-
       card.innerHTML = `
         <div class="state-group-header">
           <div class="state-title-wrap">
@@ -166,7 +140,6 @@ export function initRede() {
           </div>
           <span class="city-count">${matchingCities.length} ${matchingCities.length === 1 ? 'região atendida' : 'regiões atendidas'}</span>
         </div>
-
         <div class="city-chips-container" id="cityContainer-${index}">
           ${matchingCities.slice(0, initialDisplayCount).map(city => `
             <div class="city-chip">
@@ -175,7 +148,6 @@ export function initRede() {
             </div>
           `).join('')}
         </div>
-
         ${hasMoreCities ? `
           <div class="state-card-footer">
             <button type="button" class="btn-toggle-cities" data-expanded="false" data-target="cityContainer-${index}" data-state-index="${index}">
@@ -185,11 +157,8 @@ export function initRede() {
           </div>
         ` : ''}
       `;
-
       resultsContainer.appendChild(card);
     });
-
-    // Attach toggle listeners for expand/collapse
     document.querySelectorAll(".btn-toggle-cities").forEach(btn => {
       btn.addEventListener("click", () => {
         const targetId = btn.getAttribute("data-target");
@@ -199,9 +168,7 @@ export function initRede() {
         const stateData = filtered[stateIdx];
         const currentMobile = window.innerWidth <= 640;
         const currentLimit = currentMobile ? 3 : 5;
-
         if (isExpanded) {
-          // Collapse back to 5 (desktop) or 3 (mobile)
           container.innerHTML = stateData.cities.slice(0, currentLimit).map(city => `
             <div class="city-chip">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -211,7 +178,6 @@ export function initRede() {
           btn.setAttribute("data-expanded", "false");
           btn.innerHTML = `<span>Ver todas as ${stateData.cities.length} regiões (+${stateData.cities.length - currentLimit})</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>`;
         } else {
-          // Expand all
           container.innerHTML = stateData.cities.map(city => `
             <div class="city-chip">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -223,11 +189,8 @@ export function initRede() {
         }
       });
     });
-
-    // Map pin synchronization
     syncMapPins(filtered);
   }
-
   function syncMapPins(filteredList) {
     const activeUFs = new Set(filteredList.map(item => item.uf.replace('-CAP', '')));
     document.querySelectorAll(".map-pin").forEach(pin => {
@@ -241,13 +204,10 @@ export function initRede() {
       }
     });
   }
-
-  // Interactive Map Pins Clicking & Tooltip
   const tooltip = document.getElementById("mapTooltip");
   document.querySelectorAll(".map-pin").forEach(pin => {
     const uf = pin.getAttribute("data-uf");
     const stateName = pin.getAttribute("data-state");
-
     pin.addEventListener("mouseenter", (e) => {
       if (tooltip) {
         tooltip.textContent = `${stateName} (${uf})`;
@@ -258,25 +218,19 @@ export function initRede() {
         tooltip.style.top = `${rect.top - parentRect.top}px`;
       }
     });
-
     pin.addEventListener("mouseleave", () => {
       if (tooltip) tooltip.classList.remove("visible");
     });
-
     pin.addEventListener("click", () => {
       activeStateFilter = uf;
       renderPills();
       renderResults();
-
-      // Scroll to results smoothly
       const dashboard = document.querySelector(".dashboard-container");
       if (dashboard) {
         dashboard.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     });
   });
-
-  // Search input with debounce
   if (searchInput) {
     let timeout = null;
     searchInput.addEventListener("input", (e) => {
@@ -287,8 +241,6 @@ export function initRede() {
       }, 150);
     });
   }
-
-  // Initial render
   renderPills();
   renderResults();
 }

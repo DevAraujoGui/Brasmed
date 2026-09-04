@@ -1,12 +1,3 @@
-/**
- * Gerenciador Funcional de Cookies & LGPD da Brasmed
- * Em conformidade com LGPD e CyberDyne Recon:
- * - Armazena preferências em localStorage para evitar cookies não-HttpOnly via JavaScript (risco XSS).
- * - Realiza higienização automática de cookies legados no navegador.
- * - Exibe modal com opções de consentimento ("Permitir Todos" ou "Apenas Necessários").
- * - Botão [X] (recusa) redireciona com segurança para fora do site.
- */
-
 const STORAGE_KEYS = {
   CONSENT: 'brasmed_lgpd_consent',
   TIMESTAMP: 'brasmed_consent_timestamp',
@@ -14,8 +5,6 @@ const STORAGE_KEYS = {
   ANALYTICS: 'brasmed_analytics_enabled',
   MARKETING: 'brasmed_marketing_enabled'
 };
-
-// Remove cookies legados do document.cookie para evitar alertas de segurança (cookies JS sem HttpOnly)
 function purgeLegacyCookies() {
   const legacyCookies = [
     'brasmed_session_active',
@@ -24,40 +13,27 @@ function purgeLegacyCookies() {
     'brasmed_lgpd_consent',
     'brasmed_consent_timestamp'
   ];
-
   legacyCookies.forEach(name => {
     document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; SameSite=Strict;`;
     document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${window.location.hostname}; SameSite=Strict;`;
   });
 }
-
 export function initCookieConsent() {
-  // Limpa cookies residuais gerados via JS anteriormente
   purgeLegacyCookies();
-
   const currentConsent = localStorage.getItem(STORAGE_KEYS.CONSENT);
-
-  // Se o visitante já consentiu previamente, aplica as preferências sem bloquear a navegação
   if (currentConsent) {
     applyConsentPreferences(currentConsent);
     return;
   }
-
-  // Evita duplicação caso o modal já esteja na DOM
   if (document.querySelector('.cookie-banner')) return;
-
-  // 1. Cria o Backdrop Blur Bloqueador
   const overlay = document.createElement('div');
   overlay.className = 'cookie-overlay';
   document.body.appendChild(overlay);
-
-  // 2. Cria o Card Modal do Cookie
   const banner = document.createElement('div');
   banner.className = 'cookie-banner';
   banner.setAttribute('role', 'dialog');
   banner.setAttribute('aria-modal', 'true');
   banner.setAttribute('aria-label', 'Controle de Cookies e Privacidade');
-
   banner.innerHTML = `
     <button type="button" class="cookie-close-btn" id="cookieExitSite" title="Não aceitar e sair do site" aria-label="Fechar e sair do site">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -88,25 +64,18 @@ export function initCookieConsent() {
       </button>
     </div>
   `;
-
   document.body.appendChild(banner);
-
-  // Exibe o modal e overlay bloqueando a navegação
   setTimeout(() => {
     overlay.classList.add('show');
     banner.classList.add('show');
   }, 350);
-
   const acceptAllBtn = banner.querySelector('#cookieAcceptAll');
   const acceptNecBtn = banner.querySelector('#cookieAcceptNecessary');
   const exitSiteBtn = banner.querySelector('#cookieExitSite');
-
   function saveConsentAndUnlock(consentType) {
     localStorage.setItem(STORAGE_KEYS.CONSENT, consentType);
     localStorage.setItem(STORAGE_KEYS.TIMESTAMP, new Date().toISOString());
-
     applyConsentPreferences(consentType);
-
     banner.classList.remove('show');
     overlay.classList.remove('show');
     setTimeout(() => {
@@ -114,8 +83,6 @@ export function initCookieConsent() {
       overlay.remove();
     }, 350);
   }
-
-  // Se clicar no X: Não concorda -> sai do site
   if (exitSiteBtn) {
     exitSiteBtn.addEventListener('click', () => {
       if (window.history.length > 1 && document.referrer && !document.referrer.includes(window.location.host)) {
@@ -125,7 +92,6 @@ export function initCookieConsent() {
       }
     });
   }
-
   if (acceptAllBtn) {
     acceptAllBtn.addEventListener('click', () => saveConsentAndUnlock('all'));
   }
@@ -133,27 +99,22 @@ export function initCookieConsent() {
     acceptNecBtn.addEventListener('click', () => saveConsentAndUnlock('necessary'));
   }
 }
-
 function applyConsentPreferences(consentType) {
   localStorage.setItem(STORAGE_KEYS.SESSION, '1');
-
   if (consentType === 'all') {
     localStorage.setItem(STORAGE_KEYS.ANALYTICS, 'true');
     localStorage.setItem(STORAGE_KEYS.MARKETING, 'true');
-    
     window.dispatchEvent(new CustomEvent('brasmed_consent_updated', {
       detail: { analytics: true, marketing: true, necessary: true }
     }));
   } else {
     localStorage.removeItem(STORAGE_KEYS.ANALYTICS);
     localStorage.removeItem(STORAGE_KEYS.MARKETING);
-
     window.dispatchEvent(new CustomEvent('brasmed_consent_updated', {
       detail: { analytics: false, marketing: false, necessary: true }
     }));
   }
 }
-
 window.resetBrasmedCookies = function() {
   purgeLegacyCookies();
   Object.values(STORAGE_KEYS).forEach(key => localStorage.removeItem(key));

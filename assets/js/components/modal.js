@@ -1,1 +1,1 @@
-﻿// Modal component logic
+﻿

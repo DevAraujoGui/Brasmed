@@ -1,6 +1,3 @@
-/* ---------- PSICOSSOCIAL PAGE ---------- */
-
-/* Page Hero */
 .psico-hero {
   background: linear-gradient(135deg, var(--green-tint) 0%, var(--white) 100%);
   padding: 100px 6vw 60px;
@@ -24,29 +21,22 @@
   font-weight: 600;
   margin-bottom: 24px;
 }
-
-/* Sections Base */
 .section-psico {
   padding: 60px 6vw;
   background: var(--white);
 }
-
 .section-psico-alt {
   padding: 60px 6vw;
   background: var(--grey-bg);
   border-top: 1px solid var(--grey-line);
   border-bottom: 1px solid var(--grey-line);
 }
-
-/* Grid Layout */
 .psico-grid {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
   gap: 50px;
   align-items: start;
 }
-
-/* Comunicado Card */
 .comunicado-card {
   background: var(--white);
   border: 1px solid var(--grey-line);
@@ -91,14 +81,11 @@
 .comunicado-body p strong {
   color: var(--navy-2);
 }
-
-/* Sidebar Cards */
 .psico-sidebar {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-
 .info-card {
   background: var(--white);
   border: 1px solid var(--grey-line);
@@ -151,8 +138,6 @@
   color: var(--text-soft);
   line-height: 1.5;
 }
-
-/* Other Services Section */
 .services-section-title {
   text-align: center;
   max-width: 600px;
@@ -207,8 +192,6 @@
   color: var(--text-soft);
   line-height: 1.6;
 }
-
-/* Downloads Section */
 .download-section-title {
   text-align: center;
   max-width: 600px;
@@ -287,8 +270,6 @@
   color: var(--white);
   transform: translateY(1px);
 }
-
-/* RESPONSIVE DESIGN */
 @media (max-width: 980px) {
   .psico-grid {
     grid-template-columns: 1fr;
@@ -299,7 +280,6 @@
     gap: 20px;
   }
 }
-
 @media (max-width: 768px) {
   .psico-hero {
     padding: 70px 5vw 40px;
@@ -320,7 +300,6 @@
     gap: 10px;
   }
 }
-
 @media (max-width: 480px) {
   .download-card {
     flex-direction: column;
@@ -331,9 +310,6 @@
     align-self: flex-end;
   }
 }
-
-
-/* ---------- PAGE TABLE OF CONTENTS NAV ---------- */
 .page-toc {
   background: var(--white);
   border-bottom: 1px solid var(--grey-line);

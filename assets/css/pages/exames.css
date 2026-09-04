@@ -1,6 +1,3 @@
-/* ---------- EXAMES PAGE ---------- */
-
-/* Page Hero */
 .exames-hero {
   background: linear-gradient(135deg, var(--green-tint) 0%, var(--white) 100%);
   padding: 100px 6vw 60px;
@@ -24,21 +21,16 @@
   font-weight: 600;
   margin-bottom: 24px;
 }
-
-/* Sections Base */
 .section-exames {
   padding: 60px 6vw;
   background: var(--white);
 }
-
 .section-exames-alt {
   padding: 60px 6vw;
   background: var(--grey-bg);
   border-top: 1px solid var(--grey-line);
   border-bottom: 1px solid var(--grey-line);
 }
-
-/* Clinical Exams Grid */
 .clinical-grid {
   display: flex;
   flex-direction: column;
@@ -82,8 +74,6 @@
   color: var(--text-soft);
   line-height: 1.6;
 }
-
-/* Complementary Exams Grid */
 .comp-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -128,8 +118,6 @@
   font-weight: 700;
   color: var(--navy-2);
 }
-
-/* In-Company Callout Box */
 .incompany-box {
   background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
   color: var(--white);
@@ -167,8 +155,6 @@
   font-size: 14.5px;
   color: rgba(255, 255, 255, 0.9);
 }
-
-/* Quote Form Section */
 .quote-wrapper {
   max-width: 650px;
   margin: 40px auto 0;
@@ -240,14 +226,11 @@
   justify-content: center;
   margin-top: 10px;
 }
-
-/* RESPONSIVE DESIGN */
 @media (max-width: 1024px) {
   .comp-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
 @media (max-width: 768px) {
   .comp-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -272,7 +255,6 @@
     gap: 0;
   }
 }
-
 @media (max-width: 480px) {
   .comp-grid {
     grid-template-columns: 1fr;

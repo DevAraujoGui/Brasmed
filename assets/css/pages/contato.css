@@ -1,9 +1,4 @@
-/* ========== CONTACT (CONTATO) PAGE ========== */
-
-/* Page top margin to clear fixed navbar */
 body { padding-top: 80px; }
-
-/* ---------- PAGE HERO BANNER ---------- */
 .contact-hero {
   background: linear-gradient(135deg, var(--green-tint) 0%, var(--white) 100%);
   border-bottom: 2px solid var(--green);
@@ -34,8 +29,6 @@ body { padding-top: 80px; }
   max-width: 600px;
   margin: 0 auto;
 }
-
-/* ---------- MAIN CONTACT SECTION ---------- */
 .contact-section {
   padding: 64px 6vw;
   background: var(--white);
@@ -48,14 +41,11 @@ body { padding-top: 80px; }
   margin: 0 auto;
   align-items: flex-start;
 }
-
-/* Left: Contact Info cards */
 .contact-info {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
-
 .contact-card {
   background: var(--grey-bg);
   border: 1px solid var(--grey-line);
@@ -108,7 +98,6 @@ body { padding-top: 80px; }
 .contact-card .contact-links a.wpp-link:hover {
   color: var(--green-dark);
 }
-
 .hours-list {
   display: flex;
   flex-direction: column;
@@ -133,14 +122,11 @@ body { padding-top: 80px; }
   color: #ef4444;
   font-weight: 600;
 }
-
-/* Right: Visual components (Image + Map) */
 .contact-visuals {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
-
 .contact-image-wrapper {
   width: 100%;
   border-radius: var(--radius-m);
@@ -154,7 +140,6 @@ body { padding-top: 80px; }
   object-fit: cover;
   display: block;
 }
-
 .map-card {
   width: 100%;
   border-radius: var(--radius-m);
@@ -169,8 +154,6 @@ body { padding-top: 80px; }
   border: 0;
   display: block;
 }
-
-/* ---------- RESPONSIVE DESIGN ---------- */
 @media (max-width: 768px) {
   .contact-grid {
     grid-template-columns: 1fr;

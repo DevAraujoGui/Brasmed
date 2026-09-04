@@ -1,14 +1,11 @@
-// Floating WhatsApp Button Component
 export function initWhatsAppFloat() {
   if (document.querySelector('.whatsapp-float-container')) return;
-
   const floatBtn = document.createElement('a');
   floatBtn.href = 'https://wa.me/551149635529?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es.';
   floatBtn.target = '_blank';
   floatBtn.rel = 'noopener noreferrer';
   floatBtn.className = 'whatsapp-float-container';
   floatBtn.setAttribute('aria-label', 'Atendimento via WhatsApp');
-
   floatBtn.innerHTML = `
     <span class="whatsapp-float-label">Fale no WhatsApp</span>
     <div class="whatsapp-float-btn">
@@ -17,6 +14,5 @@ export function initWhatsAppFloat() {
       </svg>
     </div>
   `;
-
   document.body.appendChild(floatBtn);
 }

@@ -1,1 +1,1 @@
-﻿// Footer component logic
+﻿

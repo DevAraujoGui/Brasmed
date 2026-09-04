@@ -1,6 +1,4 @@
-// E-mail de destino protegido: diretoria@brasmedsaudeocupacional.com.br
 const _ENC_DEST = 'ZGlyZXRvcmlhQGJyYXNtZWRzYXVkZW9jdXBhY2lvbmFsLmNvbS5icg=='; 
-
 export function getProtectedRecipient() {
   try {
     return atob(_ENC_DEST);
@@ -8,7 +6,6 @@ export function getProtectedRecipient() {
     return 'diretoria@brasmedsaudeocupacional.com.br';
   }
 }
-
 export function formatEmailContent(formData) {
   const nome = formData.nome || formData.name || 'Cliente';
   const empresa = formData.empresa || formData.company || 'Não informada';
@@ -17,14 +14,10 @@ export function formatEmailContent(formData) {
   const assunto = formData.assunto || formData.exame || 'Contato pelo Site Brasmed';
   const mensagem = formData.mensagem || formData.message || 'Gostaria de solicitar informações/orçamento.';
   const origem = formData.form_origem || 'Website Brasmed';
-
   const subject = `[Brasmed] Contato de ${nome} - ${assunto}`;
-
   const body = 
 `Olá, equipe Brasmed!
-
 Gostaria de solicitar informações com os seguintes dados:
-
 --------------------------------------------------
 DADOS DO CONTATO
 --------------------------------------------------
@@ -34,45 +27,34 @@ E-mail: ${email}
 WhatsApp: ${whatsapp}
 Assunto / Exame: ${assunto}
 Origem: ${origem}
-
 --------------------------------------------------
 MENSAGEM:
 --------------------------------------------------
 ${mensagem}
-
 --------------------------------------------------
 Enviado através do formulário oficial Brasmed.`;
-
   return { subject, body, nome, empresa, email, whatsapp, assunto };
 }
-
 export function openEmailProviderModal(formData, onSuccessCallback) {
-  // Remove qualquer modal prévio
   const existingModal = document.getElementById('emailProviderModal');
   if (existingModal) existingModal.remove();
-
   const recipient = getProtectedRecipient();
   const { subject, body, nome } = formatEmailContent(formData);
-
   const encodedRecipient = encodeURIComponent(recipient);
   const encodedSubject = encodeURIComponent(subject);
   const encodedBody = encodeURIComponent(body);
-
-  // URLs diretas dos provedores
   const urls = {
     gmail: `https://mail.google.com/mail/?view=cm&fs=1&to=${encodedRecipient}&su=${encodedSubject}&body=${encodedBody}`,
     outlook: `https://outlook.live.com/mail/0/deeplink/compose?to=${encodedRecipient}&subject=${encodedSubject}&body=${encodedBody}`,
     yahoo: `https://compose.mail.yahoo.com/?to=${encodedRecipient}&subj=${encodedSubject}&body=${encodedBody}`,
     mailto: `mailto:${recipient}?subject=${encodedSubject}&body=${encodedBody}`
   };
-
   const modalOverlay = document.createElement('div');
   modalOverlay.id = 'emailProviderModal';
   modalOverlay.className = 'email-modal-overlay';
   modalOverlay.setAttribute('role', 'dialog');
   modalOverlay.setAttribute('aria-modal', 'true');
   modalOverlay.setAttribute('aria-label', 'Escolha como enviar seu e-mail');
-
   modalOverlay.innerHTML = `
     <div class="email-modal-container">
       <div class="email-modal-header">
@@ -90,9 +72,7 @@ export function openEmailProviderModal(formData, onSuccessCallback) {
           &times;
         </button>
       </div>
-
       <div class="email-providers-grid">
-        <!-- Opção Google Gmail -->
         <a href="${urls.gmail}" target="_blank" rel="noopener noreferrer" class="provider-card provider-gmail" data-provider="Google Gmail">
           <div class="provider-icon">
             <svg viewBox="0 0 24 24" width="26" height="26">
@@ -108,8 +88,6 @@ export function openEmailProviderModal(formData, onSuccessCallback) {
           </div>
           <span class="provider-arrow">→</span>
         </a>
-
-        <!-- Opção Microsoft Outlook -->
         <a href="${urls.outlook}" target="_blank" rel="noopener noreferrer" class="provider-card provider-outlook" data-provider="Microsoft Outlook">
           <div class="provider-icon">
             <svg viewBox="0 0 24 24" width="26" height="26">
@@ -125,8 +103,6 @@ export function openEmailProviderModal(formData, onSuccessCallback) {
           </div>
           <span class="provider-arrow">→</span>
         </a>
-
-        <!-- Opção Yahoo Mail -->
         <a href="${urls.yahoo}" target="_blank" rel="noopener noreferrer" class="provider-card provider-yahoo" data-provider="Yahoo Mail">
           <div class="provider-icon">
             <svg viewBox="0 0 24 24" width="26" height="26">
@@ -139,8 +115,6 @@ export function openEmailProviderModal(formData, onSuccessCallback) {
           </div>
           <span class="provider-arrow">→</span>
         </a>
-
-        <!-- Opção Aplicativo Padrão (Mailto) -->
         <a href="${urls.mailto}" class="provider-card provider-default" data-provider="App Padrão">
           <div class="provider-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
@@ -155,7 +129,6 @@ export function openEmailProviderModal(formData, onSuccessCallback) {
           <span class="provider-arrow">→</span>
         </a>
       </div>
-
       <div class="email-modal-footer">
         <button type="button" class="copy-email-btn" id="copyMessageData">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -167,35 +140,26 @@ export function openEmailProviderModal(formData, onSuccessCallback) {
       </div>
     </div>
   `;
-
   document.body.appendChild(modalOverlay);
-
-  // Animação de entrada
   requestAnimationFrame(() => {
     modalOverlay.classList.add('show');
   });
-
-  // Funções de fechamento
   function closeModal() {
     modalOverlay.classList.remove('show');
     setTimeout(() => {
       modalOverlay.remove();
     }, 300);
   }
-
   modalOverlay.querySelector('#closeEmailModal').addEventListener('click', closeModal);
   modalOverlay.addEventListener('click', (e) => {
     if (e.target === modalOverlay) closeModal();
   });
-
   document.addEventListener('keydown', function escHandler(e) {
     if (e.key === 'Escape') {
       closeModal();
       document.removeEventListener('keydown', escHandler);
     }
   });
-
-  // Listener para os cards de provedores
   const providerCards = modalOverlay.querySelectorAll('.provider-card');
   providerCards.forEach(card => {
     card.addEventListener('click', () => {
@@ -205,11 +169,8 @@ export function openEmailProviderModal(formData, onSuccessCallback) {
       setTimeout(closeModal, 800);
     });
   });
-
-  // Ação de copiar mensagem completa
   const copyBtn = modalOverlay.querySelector('#copyMessageData');
   const copyBtnText = modalOverlay.querySelector('#copyBtnText');
-
   if (copyBtn) {
     copyBtn.addEventListener('click', () => {
       const fullCopyText = `Para: ${recipient}\nAssunto: ${subject}\n\n${body}`;

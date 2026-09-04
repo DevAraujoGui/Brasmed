@@ -1,7 +1,5 @@
 import { submitContactForm } from '../api.js';
-
 export function initHome() {
-  // ---- Hero carousel ----
   const slides = document.querySelectorAll('.hero-slide');
   const dotsWrap = document.getElementById('heroDots');
   if (slides.length > 0 && dotsWrap) {
@@ -13,7 +11,6 @@ export function initHome() {
       dotsWrap.appendChild(dot);
     });
     const dots = document.querySelectorAll('.hero-dot');
-
     function goTo(i){
       slides[current].classList.remove('active');
       dots[current].classList.remove('active');
@@ -21,12 +18,10 @@ export function initHome() {
       slides[current].classList.add('active');
       dots[current].classList.add('active');
     }
-
     const nextSlide = document.getElementById('nextSlide');
     const prevSlide = document.getElementById('prevSlide');
     if (nextSlide) nextSlide.addEventListener('click', () => goTo(current + 1));
     if (prevSlide) prevSlide.addEventListener('click', () => goTo(current - 1));
-
     let autoplay = setInterval(() => goTo(current + 1), 6500);
     const heroSection = document.getElementById('hero');
     if (heroSection) {
@@ -36,8 +31,6 @@ export function initHome() {
       });
     }
   }
-
-  // ---- WhatsApp phone mask ----
   const wpp = document.getElementById('whatsapp');
   if (wpp) {
     wpp.addEventListener('input', () => {
@@ -48,8 +41,6 @@ export function initHome() {
       wpp.value = v;
     });
   }
-
-  // ---- Form submit ----
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {

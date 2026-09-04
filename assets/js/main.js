@@ -1,4 +1,3 @@
-// Main application entry point
 import { initNavbar } from './components/navbar.js';
 import { initWhatsAppFloat } from './components/whatsapp.js';
 import { initCookieConsent } from './components/cookies.js';
@@ -7,7 +6,6 @@ import { initRede } from './pages/rede-credenciada.js';
 import { initEsocial } from './pages/esocial.js';
 import { initNrs } from './pages/nrs.js';
 import { submitContactForm } from './api.js';
-
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initWhatsAppFloat();
@@ -16,8 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initRede();
   initEsocial();
   initNrs();
-
-  // Escuta formulários de cotação internos (quoteForm)
   const quoteForm = document.getElementById('quoteForm');
   if (quoteForm) {
     quoteForm.addEventListener('submit', (e) => {
@@ -27,7 +23,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-
-
-
-

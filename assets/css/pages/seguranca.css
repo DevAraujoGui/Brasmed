@@ -1,6 +1,3 @@
-/* ---------- SEGURANCA DO TRABALHO (PPP, PGR, LTCAT, TREINAMENTOS) ---------- */
-
-/* Page Hero */
 .seg-hero {
   background: linear-gradient(135deg, var(--green-tint) 0%, var(--white) 100%);
   padding: 100px 6vw 60px;
@@ -24,21 +21,16 @@
   font-weight: 600;
   margin-bottom: 24px;
 }
-
-/* Sections Base */
 .section-seg {
   padding: 60px 6vw;
   background: var(--white);
 }
-
 .section-seg-alt {
   padding: 60px 6vw;
   background: var(--grey-bg);
   border-top: 1px solid var(--grey-line);
   border-bottom: 1px solid var(--grey-line);
 }
-
-/* Intro Grid */
 .seg-intro-grid {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
@@ -57,7 +49,6 @@
   line-height: 1.7;
   margin-bottom: 14px;
 }
-
 .seg-highlight-box {
   background: var(--green-tint);
   border-left: 4px solid var(--green);
@@ -67,7 +58,6 @@
   flex-direction: column;
   gap: 20px;
 }
-
 .seg-feature-item {
   display: flex;
   gap: 16px;
@@ -95,15 +85,12 @@
   color: var(--text-soft);
   line-height: 1.5;
 }
-
-/* Cards Grid */
 .seg-cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
   margin-top: 40px;
 }
-
 .seg-card {
   background: var(--white);
   border: 1px solid var(--grey-line);
@@ -141,8 +128,6 @@
   line-height: 1.6;
   flex-grow: 1;
 }
-
-/* Timeline / Items list */
 .seg-timeline-list {
   display: flex;
   flex-direction: column;
@@ -187,8 +172,6 @@
   color: var(--text-soft);
   line-height: 1.6;
 }
-
-/* Treinamentos Specific Grid */
 .training-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -238,8 +221,6 @@
   margin-bottom: 16px;
   flex-grow: 1;
 }
-
-/* Call to action bar (substitui o formulário) */
 .seg-cta-banner {
   padding: 70px 6vw;
   background: linear-gradient(135deg, var(--navy-2) 0%, #1e293b 100%);
@@ -267,8 +248,6 @@
   justify-content: center;
   flex-wrap: wrap;
 }
-
-/* ---------- NRs INTERACTIVE CARDS GRID ---------- */
 .nrs-search-container {
   max-width: 600px;
   margin: 0 auto 36px;
@@ -298,13 +277,11 @@
   color: var(--text-soft);
   pointer-events: none;
 }
-
 .nrs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
 }
-
 .nr-card {
   position: relative;
   background: var(--white);
@@ -319,13 +296,11 @@
   box-shadow: var(--shadow-soft);
   transition: transform 0.28s var(--ease), border-color 0.28s var(--ease), box-shadow 0.28s var(--ease);
 }
-
 .nr-card:hover {
   transform: translateY(-5px);
   border-color: var(--green);
   box-shadow: 0 10px 24px rgba(0, 135, 90, 0.12);
 }
-
 .nr-card::before {
   content: "";
   position: absolute;
@@ -338,14 +313,12 @@
   opacity: 0.9;
   pointer-events: none;
 }
-
 .nr-card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 12px;
 }
-
 .nr-badge {
   font-family: 'Outfit', sans-serif;
   font-size: 14px;
@@ -357,7 +330,6 @@
   border-radius: 20px;
   letter-spacing: 0.04em;
 }
-
 .nr-card-icon {
   width: 28px;
   height: 28px;
@@ -369,13 +341,11 @@
   justify-content: center;
   transition: background 0.2s var(--ease), color 0.2s var(--ease), transform 0.2s var(--ease);
 }
-
 .nr-card:hover .nr-card-icon {
   background: var(--green);
   color: var(--white);
   transform: translateX(3px);
 }
-
 .nr-title {
   font-size: 15.5px;
   font-weight: 700;
@@ -384,7 +354,6 @@
   margin-bottom: 14px;
   flex-grow: 1;
 }
-
 .nr-link-label {
   display: inline-flex;
   align-items: center;
@@ -395,7 +364,6 @@
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
-
 .nr-card.revoked {
   background: #f8fafc;
   opacity: 0.85;
@@ -405,10 +373,6 @@
   color: #991b1b;
   border-color: #fca5a5;
 }
-
-
-
-/* Responsiveness */
 @media (max-width: 900px) {
   .seg-intro-grid {
     grid-template-columns: 1fr;
@@ -418,7 +382,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 768px) {
   .seg-hero {
     padding: 70px 5vw 40px;
@@ -435,7 +398,6 @@
     padding: 20px;
   }
 }
-
 @media (max-width: 600px) {
   .training-grid {
     grid-template-columns: 1fr;
@@ -457,4 +419,3 @@
     justify-content: center;
   }
 }
-

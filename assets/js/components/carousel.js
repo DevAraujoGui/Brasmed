@@ -1,1 +1,1 @@
-﻿// Carousel component logic
+﻿

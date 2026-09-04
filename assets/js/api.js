@@ -1,23 +1,16 @@
-// Helper para submissão de formulários e integração com o modal seletor de provedores de e-mail
 import { openEmailProviderModal } from './components/email-modal.js';
-
 export async function submitContactForm(formElement, options = {}) {
   const submitBtn = formElement.querySelector('button[type="submit"]');
   const originalHtml = submitBtn ? submitBtn.innerHTML : 'Enviar';
-
   const formData = new FormData(formElement);
   const data = Object.fromEntries(formData.entries());
-
   if (options.origem) {
     data.form_origem = options.origem;
   }
-
-  // Validação básica adicional de campos obrigatórios
   if (!data.email || !data.nome) {
     alert('Por favor, preencha seu nome e e-mail antes de enviar.');
     return;
   }
-
   if (submitBtn) {
     submitBtn.disabled = true;
     submitBtn.innerHTML = `
@@ -30,8 +23,6 @@ export async function submitContactForm(formElement, options = {}) {
       </span>
     `;
   }
-
-  // Dispara envio em segundo plano para o servidor/log
   fetch('/api/send-email.php', {
     method: 'POST',
     headers: {
@@ -42,8 +33,6 @@ export async function submitContactForm(formElement, options = {}) {
   }).catch(err => {
     console.log('[Brasmed Form] Envio assíncrono em background concluído/registrado.');
   });
-
-  // Abre o modal para o usuário escolher seu cliente de e-mail favorito
   setTimeout(() => {
     openEmailProviderModal(data, (selectedProvider) => {
       if (submitBtn) {
@@ -59,7 +48,6 @@ export async function submitContactForm(formElement, options = {}) {
         }
       }, 4000);
     });
-
     if (submitBtn) {
       submitBtn.disabled = false;
       submitBtn.innerHTML = originalHtml;
